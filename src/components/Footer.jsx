@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
+import {
+  Heart,
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
   Youtube,
   ArrowRight,
   Clock,
@@ -39,7 +39,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Twitter, href: '#', label: 'Twitter (X)' },
     { icon: Instagram, href: '#', label: 'Instagram' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Youtube, href: '#', label: 'YouTube' },

@@ -40,6 +40,8 @@ const Navbar = () => {
             ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl py-3 shadow-lg'
             : 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm py-4'
         }`}
+        role="navigation"
+        aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -49,6 +51,7 @@ const Navbar = () => {
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
+              aria-label="MediLux Healthcare Home"
             >
               <div className="relative">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg">
@@ -62,7 +65,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8" role="menubar">
               {navLinks.map((link, index) => (
                 <Link
                   key={link.name}
@@ -75,6 +78,7 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  role="menuitem"
                 >
                   {link.name}
                   {isActive(link.href) && (
@@ -98,7 +102,7 @@ const Navbar = () => {
                 className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                aria-label="Toggle theme"
+                aria-label="Toggle dark mode"
               >
                 {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </motion.button>
@@ -107,6 +111,7 @@ const Navbar = () => {
                 to="tel:+1234567890"
                 className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 whileHover={{ scale: 1.05 }}
+                aria-label="Call us at +1 (555) 123-4567"
               >
                 <Phone className="w-4 h-4" />
                 <span className="text-sm font-medium">+1 (555) 123-4567</span>
@@ -134,7 +139,7 @@ const Navbar = () => {
                 onClick={toggleTheme}
                 className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300"
                 whileTap={{ scale: 0.9 }}
-                aria-label="Toggle theme"
+                aria-label="Toggle dark mode"
               >
                 {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </motion.button>
@@ -142,6 +147,9 @@ const Navbar = () => {
                 className="text-gray-700 dark:text-gray-300 p-2"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 whileTap={{ scale: 0.9 }}
+                aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu"
               >
                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </motion.button>
@@ -159,23 +167,35 @@ const Navbar = () => {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25 }}
             className="fixed inset-0 z-40 lg:hidden"
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation menu"
           >
-            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+            <div 
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
             <div className="absolute right-0 top-0 bottom-0 w-80 bg-white dark:bg-slate-900 p-6 shadow-2xl">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-8">
-                  <Link to="/" className="flex items-center space-x-3">
+                  <Link to="/" className="flex items-center space-x-3" aria-label="MediLux Healthcare Home">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                       <span className="text-white font-bold text-lg">M</span>
                     </div>
                     <span className="text-xl font-bold text-gray-900 dark:text-white">Medi<span className="text-emerald-600 dark:text-emerald-400">Lux</span></span>
                   </Link>
-                  <button onClick={() => setIsMobileMenuOpen(false)} className="text-gray-700 dark:text-gray-300 p-2">
+                  <button 
+                    onClick={() => setIsMobileMenuOpen(false)} 
+                    className="text-gray-700 dark:text-gray-300 p-2"
+                    aria-label="Close menu"
+                  >
                     <X className="w-6 h-6" />
                   </button>
                 </div>
 
-                <nav className="flex-1 space-y-4">
+                <nav className="flex-1 space-y-4" role="navigation" aria-label="Mobile navigation">
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
@@ -201,7 +221,7 @@ const Navbar = () => {
                   >
                     Book Appointment
                   </Link>
-                  <a href="tel:+15551234567" className="block text-gray-600 dark:text-gray-400 text-center">
+                  <a href="tel:+15551234567" className="block text-gray-600 dark:text-gray-400 text-center" aria-label="Call us">
                     +1 (555) 123-4567
                   </a>
                 </div>

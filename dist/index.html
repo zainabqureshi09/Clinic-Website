@@ -3,65 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Premium Healthcare - Your Family's Health Starts Here. World-class medical and dental care with state-of-the-art facilities." />
-    <meta name="keywords" content="healthcare, medical clinic, dental care, premium healthcare, family health" />
-    <title>MediLux Premium Healthcare | Medical & Dental Clinic</title>
+    <link rel="manifest" href="/manifest.json" />
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="MediLux Healthcare - Premium family healthcare with world-class medical and dental services. Board-certified doctors, state-of-the-art facilities, 25+ years of excellence." />
+    <meta name="keywords" content="healthcare, medical clinic, dental care, family doctor, cardiology, pediatrics, orthopedics, neurology, premium healthcare, medical center" />
+    <meta name="author" content="MediLux Healthcare" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MediLux Healthcare | Premium Medical & Dental Clinic" />
+    <meta property="og:description" content="World-class healthcare with cutting-edge technology and expert specialists. Your family's health starts here." />
+    <meta property="og:site_name" content="MediLux Healthcare" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MediLux Healthcare | Premium Medical & Dental Clinic" />
+    <meta name="twitter:description" content="World-class healthcare with cutting-edge technology and expert specialists." />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#059669" />
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    
+    <title>MediLux Healthcare | Premium Medical & Dental Clinic</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <style>
       html {
         scroll-behavior: smooth;
       }
-      
+
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      
+
       body {
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         background: #ffffff;
         color: #1f2937;
         overflow-x: hidden;
       }
-      
+
       .dark body {
         background: #0f172a;
         color: #f1f5f9;
       }
-      
+
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Poppins', system-ui, -apple-system, sans-serif;
       }
-      
+
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
-      
+
       ::-webkit-scrollbar-track {
         background: #f3f4f6;
       }
-      
+
       .dark ::-webkit-scrollbar-track {
         background: #1e293b;
       }
-      
+
       ::-webkit-scrollbar-thumb {
         background: linear-gradient(180deg, #059669, #14b8a6);
         border-radius: 4px;
       }
-      
+
       ::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(180deg, #047857, #0d9488);
       }
-      
+
       /* Selection */
       ::-moz-selection {
         background: rgba(5, 150, 105, 0.2);
@@ -71,35 +97,49 @@
         background: rgba(5, 150, 105, 0.2);
         color: #059669;
       }
-      
+
       .dark ::-moz-selection {
         background: rgba(5, 150, 105, 0.3);
         color: #6ee7b7;
       }
-      
+
       .dark ::selection {
         background: rgba(5, 150, 105, 0.3);
         color: #6ee7b7;
       }
-      
+
       /* Floating Animation */
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-20px); }
       }
-      
+
       .floating {
         animation: float 6s ease-in-out infinite;
       }
-      
+
       .floating-delayed {
         animation: float 6s ease-in-out 3s infinite;
       }
+      
+      /* Prevent FOUC */
+      .no-js body {
+        opacity: 0;
+      }
     </style>
-    <script type="module" crossorigin src="/assets/index-BRxkQoqF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BnFyXzwv.css">
+    
+    <script>
+      // Prevent flash of unstyled content
+      document.documentElement.classList.remove('no-js');
+    </script>
+    <script type="module" crossorigin src="/assets/index-BqZGaac9.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-ckXfDxeS.js">
+    <link rel="modulepreload" crossorigin href="/assets/framer-motion-DtYY1ot1.js">
+    <link rel="modulepreload" crossorigin href="/assets/lucide-react-CNEkClor.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CbYTrumi.css">
   </head>
   <body>
+    <noscript>You need to enable JavaScript to run this application.</noscript>
     <div id="root"></div>
   </body>
 </html>
