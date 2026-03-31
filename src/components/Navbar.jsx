@@ -21,8 +21,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Our Doctors', href: '/doctors' },
+    { name: 'Specialists', href: '/specialties' },
     { name: 'Services', href: '/services' },
-    { name: 'Calendars', href: '/services' },
     { name: 'Contact Us', href: '/contact' },
   ];
 
