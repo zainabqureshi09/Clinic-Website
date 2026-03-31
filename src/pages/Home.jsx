@@ -150,18 +150,20 @@ const Home = () => {
               className="relative hidden lg:block"
             >
               <div className="relative w-full h-[600px]">
+                {/* Main Circular Image - Clinic Exam Room */}
                 <motion.div
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=600&fit=crop"
-                    alt="Doctor"
+                    src="/clinic-exam-room.jpg"
+                    alt="BSRV Clinic Exam Room"
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
 
+                {/* Floating Image 1 - Clinic Office Interior */}
                 <motion.div
                   className="absolute top-20 right-0 w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -169,12 +171,13 @@ const Home = () => {
                   transition={{ delay: 0.8 }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop"
-                    alt="Medical Team"
+                    src="/clinic-office-interior.jpg"
+                    alt="BSRV Medical Office Interior"
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
 
+                {/* Floating Image 2 - Clinic Waiting Room */}
                 <motion.div
                   className="absolute bottom-32 left-0 w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating-delayed"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -182,12 +185,13 @@ const Home = () => {
                   transition={{ delay: 1 }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=400&fit=crop"
-                    alt="Healthcare"
+                    src="/clinic-waiting-room.jpg"
+                    alt="BSRV Clinic Waiting Room"
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
 
+                {/* Floating Card 1 */}
                 <motion.div
                   className="absolute top-40 left-0 px-6 py-4 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700 floating-delayed"
                   initial={{ opacity: 0, x: -50 }}
@@ -199,12 +203,13 @@ const Home = () => {
                       <Activity className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                     </div>
                     <div>
-                      <div className="text-gray-900 dark:text-white font-semibold">24/7 Care</div>
-                      <div className="text-gray-500 dark:text-gray-400 text-sm">Always Available</div>
+                      <div className="text-gray-900 dark:text-white font-semibold">Walk-in Clinic</div>
+                      <div className="text-gray-500 dark:text-gray-400 text-sm">No Appointment Needed</div>
                     </div>
                   </div>
                 </motion.div>
 
+                {/* Floating Card 2 */}
                 <motion.div
                   className="absolute bottom-20 right-0 px-6 py-4 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700 floating"
                   initial={{ opacity: 0, x: 50 }}
@@ -216,8 +221,8 @@ const Home = () => {
                       <Award className="w-6 h-6 text-teal-600 dark:text-teal-400" />
                     </div>
                     <div>
-                      <div className="text-gray-900 dark:text-white font-semibold">Expert Doctors</div>
-                      <div className="text-gray-500 dark:text-gray-400 text-sm">Board Certified</div>
+                      <div className="text-gray-900 dark:text-white font-semibold">Multilingual Staff</div>
+                      <div className="text-gray-500 dark:text-gray-400 text-sm">English, Tamil, Hindi, Urdu</div>
                     </div>
                   </div>
                 </motion.div>

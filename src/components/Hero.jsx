@@ -190,8 +190,8 @@ const Hero = () => {
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=600&fit=crop"
-                  alt="Doctor"
+                  src="/clinic-exam-room.jpg"
+                  alt="BSRV Clinic Exam Room"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -204,8 +204,8 @@ const Hero = () => {
                 transition={{ delay: 0.8 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop"
-                  alt="Medical Team"
+                  src="/clinic-office-interior.jpg"
+                  alt="BSRV Medical Office Interior"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -218,8 +218,8 @@ const Hero = () => {
                 transition={{ delay: 1 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=400&fit=crop"
-                  alt="Healthcare"
+                  src="/clinic-waiting-room.jpg"
+                  alt="BSRV Clinic Waiting Room"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -254,8 +254,8 @@ const Hero = () => {
                     <Award className="w-6 h-6 text-teal-600 dark:text-teal-400" />
                   </div>
                   <div>
-                    <div className="text-gray-900 dark:text-white font-semibold">Multilingual Staff</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm">English, Tamil, Hindi, Urdu</div>
+                    <div className="text-gray-900 dark:text-white font-semibold">Expert Doctors</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">Board Certified</div>
                   </div>
                 </div>
               </motion.div>
