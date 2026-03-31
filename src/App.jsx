@@ -4,7 +4,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Specialties from './pages/Specialties';
+import Specialists from './pages/Specialists';
 import Doctors from './pages/Doctors';
 import Testimonials from './pages/Testimonials';
 import Appointment from './pages/Appointment';
@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
               <Route path="services" element={<Services />} />
-              <Route path="specialties" element={<Specialties />} />
+              <Route path="specialties" element={<Specialists />} />
               <Route path="doctors" element={<Doctors />} />
               <Route path="testimonials" element={<Testimonials />} />
               <Route path="appointment" element={<Appointment />} />
