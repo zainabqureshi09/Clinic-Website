@@ -115,10 +115,31 @@ const Specialists = () => {
                   <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-white/10 blur-2xl" />
                 </div>
 
+                {/* Doctor Image */}
+                <div className="relative -mt-24 mb-6 flex justify-center">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700"
+                  >
+                    <img
+                      src={specialist.image}
+                      alt={specialist.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center"><div class="text-center"><div class="w-20 h-20 mx-auto rounded-full bg-emerald-200 dark:bg-slate-600 flex items-center justify-center"><svg class="w-10 h-10 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div></div></div>';
+                      }}
+                    />
+                  </motion.div>
+                </div>
+
                 {/* Profile Content */}
                 <div className="relative px-8 pb-8">
                   {/* Name & Specialty */}
-                  <div className="flex flex-col md:flex-row md:items-end md:justify-between -mt-16 mb-6">
+                  <div className="flex flex-col md:flex-row md:items-end md:justify-between -mt-6 mb-6">
                     <div>
                       <motion.h2
                         initial={{ opacity: 0, y: 20 }}
