@@ -72,6 +72,36 @@ const Doctors = () => {
       ],
       languages: ['English', 'Hindi', 'Urdu', 'Gujarati'],
     },
+    {
+      name: 'Dr. Pooja Kharbanda',
+      title: 'Nephrologist and Internist',
+      position: 'Kidney & Internal Medicine Specialist',
+      image: '/drpooja.png',
+      status: 'Accepting New Patients',
+      specialties: [
+        'Nephrology',
+        'Internal Medicine',
+        'Kidney Disease Management',
+      ],
+      education: [
+        {
+          degree: 'Nephrology Fellowship',
+          institution: 'Jefferson Einstein Hospital, Philadelphia',
+          icon: Award,
+        },
+        {
+          degree: 'Internal Medicine Residency',
+          institution: 'Pennsylvania',
+          icon: Stethoscope,
+        },
+        {
+          degree: 'Medical Degree',
+          institution: 'Aureus University School of Medicine',
+          icon: BookOpen,
+        },
+      ],
+      languages: ['English'],
+    },
   ];
 
   return (
