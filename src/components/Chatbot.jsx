@@ -94,7 +94,7 @@ const Chatbot = () => {
                   <Bot className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">BSRV Assistant</h3>
+                  <h3 className="text-white font-semibold">BSRV Medical & Dental Assistant</h3>
                   <p className="text-white/80 text-xs">Always Online • Here to Help</p>
                 </div>
               </div>

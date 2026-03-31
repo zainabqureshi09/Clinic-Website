@@ -6,13 +6,13 @@ export const knowledgeBase = [
     id: 1,
     category: 'general',
     question: 'What are your operating hours?',
-    answer: 'Our clinic is open 7 days a week from 8:00 AM to 8:00 PM. We welcome walk-ins for urgent care needs, no appointment necessary.',
+    answer: 'Our clinic is open 7 days a week. For urgent care needs, we welcome walk-ins. Dr. Pooja Kharbanda is available on Wednesdays from 11:00 AM to 8:00 PM. Please call us at 416-649-6388 for specific department hours.',
     keywords: ['hours', 'open', 'time', 'schedule', 'when'],
   },
   {
     id: 2,
     category: 'general',
-    question: 'Where is BSRV Medical & Dental Office located?',
+    question: 'Where is BSRV Medical & Dental located?',
     answer: 'We are located at 3430 Finch Ave E, Suite 6A, Scarborough, ON M1W 2R5 (Warden & Finch Area). We are accessible by public transit and have parking available nearby.',
     keywords: ['location', 'address', 'where', 'directions', 'parking'],
   },
@@ -20,14 +20,14 @@ export const knowledgeBase = [
     id: 3,
     category: 'general',
     question: 'How do I book an appointment?',
-    answer: 'You can book an appointment in several ways: (1) Use our online booking form on the Appointment page, (2) Call us at 416-649-6388, or (3) Email us at bsrvmedical@gmail.com. Walk-ins are also welcome!',
+    answer: 'You can book an appointment in several ways: (1) Use our online booking form on the Appointment page, (2) Call us at 416-649-6388, or (3) Email us at bsrvmedical@gmail.com. Walk-ins are also welcome for urgent care!',
     keywords: ['book', 'appointment', 'schedule', 'reservation'],
   },
   {
     id: 4,
     category: 'services',
     question: 'What medical services do you offer?',
-    answer: 'We offer comprehensive healthcare services including: Walk-In Clinic, Minor Injuries Treatment, Acute Illnesses, Medical Consultations, Dental Care, and Multilingual Services (English, Tamil, Hindi, Urdu, and more).',
+    answer: 'We offer comprehensive healthcare services including: Family Medicine, Walk-In Clinic, Minor Injuries Treatment, Acute Illnesses, Medical Consultations, Dental Care, Nephrology, and Internal Medicine. Our multilingual staff serves patients in English, Tamil, Hindi, Urdu, Sylheti, Bengali, and Gujarati.',
     keywords: ['services', 'treatments', 'offer', 'specialties', 'medical'],
   },
   {
@@ -39,108 +39,136 @@ export const knowledgeBase = [
   },
   {
     id: 6,
-    category: 'services',
-    question: 'Do you have family medicine services?',
-    answer: 'Yes, our Family Medicine department is led by Dr. Ruhin Karim (MD, FRCGP, CCFP) and Dr. Mohammed Aamir Saiyed (MD). We offer patient-centred and preventive care for individuals and families.',
-    keywords: ['family', 'medicine', 'doctor', 'physician', 'primary care'],
+    category: 'doctors',
+    question: 'Who are the doctors at BSRV?',
+    answer: 'Our medical team includes: Dr. Ruhin Karim (MD, FRCGP, CCFP - Professor of Family Medicine, UK-Trained), Dr. Mohammed Aamir Saiyed (MD - Family Medicine, Central Michigan University), and Dr. Pooja Kharbanda (Nephrologist and Internist). We also have an experienced dental team.',
+    keywords: ['doctors', 'physicians', 'staff', 'team', 'specialists'],
   },
   {
     id: 7,
+    category: 'doctors',
+    question: 'Tell me about Dr. Ruhin Karim',
+    answer: 'Dr. Ruhin Karim is a UK-Trained Family Physician with MD, FRCGP, and CCFP certifications. He is a Professor of Family Medicine specializing in patient-centred and preventive care for individuals and families. He speaks English, Sylheti, Bengali, Urdu, and Hindi.',
+    keywords: ['ruhin', 'karim', 'professor', 'uk-trained'],
+  },
+  {
+    id: 8,
+    category: 'doctors',
+    question: 'Tell me about Dr. Mohammed Aamir Saiyed',
+    answer: 'Dr. Mohammed Aamir Saiyed (MD) completed his Family Medicine residency at Central Michigan University (2021-2024) and internship at Central Michigan University (2021-2022). He graduated from American University of the Caribbean School of Medicine (Class of 2021). He speaks English, Hindi, Urdu, and Gujarati.',
+    keywords: ['saiyed', 'aamir', 'mohammed', 'central michigan'],
+  },
+  {
+    id: 9,
+    category: 'doctors',
+    question: 'Tell me about Dr. Pooja Kharbanda',
+    answer: 'Dr. Pooja Kharbanda is a Nephrologist and Internist specializing in complex kidney and systemic conditions. She completed her Medical Degree at Aureus University School of Medicine, Internal Medicine Residency in Pennsylvania, and Nephrology Fellowship at Jefferson Einstein Hospital, Philadelphia. She is licensed with the College of Physicians and Surgeons of Ontario (CPSO). Available Wednesdays 11:00 AM - 8:00 PM.',
+    keywords: ['pooja', 'kharbanda', 'nephrologist', 'kidney', 'internist'],
+  },
+  {
+    id: 10,
+    category: 'services',
+    question: 'What does Dr. Pooja Kharbanda specialize in?',
+    answer: 'Dr. Pooja Kharbanda specializes in: Chronic Kidney Disease, Glomerular Disorders, Hypertension Management, and Electrolyte Disturbances. She provides patient-centered, evidence-based care with clear communication and individualized treatment.',
+    keywords: ['nephrology', 'kidney', 'hypertension', 'electrolyte', 'glomerular'],
+  },
+  {
+    id: 11,
     category: 'insurance',
     question: 'What insurance do you accept?',
     answer: 'We accept OHIP (Ontario Health Insurance Plan) and most major insurance providers. Please contact our office at 416-649-6388 to verify your specific plan.',
     keywords: ['insurance', 'coverage', 'payment', 'billing', 'accept'],
   },
   {
-    id: 8,
+    id: 12,
     category: 'insurance',
     question: 'What are your payment options?',
     answer: 'We accept cash, credit cards (Visa, MasterCard), debit cards, and direct billing to insurance companies. For uninsured services, payment is due at the time of visit.',
     keywords: ['payment', 'pay', 'cost', 'price', 'money', 'card'],
   },
   {
-    id: 9,
-    category: 'doctors',
-    question: 'How many doctors work at BSRV?',
-    answer: 'We have experienced multilingual doctors including Dr. Ruhin Karim (UK-Trained Family Physician) and Dr. Mohammed Aamir Saiyed (MD, Central Michigan University), along with our dental team.',
-    keywords: ['doctors', 'physicians', 'staff', 'team', 'specialists'],
-  },
-  {
-    id: 10,
+    id: 13,
     category: 'doctors',
     question: 'Can I choose my doctor?',
-    answer: 'Yes, you can request your preferred doctor when booking an appointment. You can view all our doctors and their specialties on the Doctors page. Walk-ins are also welcome.',
+    answer: 'Yes, you can request your preferred doctor when booking an appointment. You can view all our doctors and their specialties on the Our Doctors page. Walk-ins are also welcome.',
     keywords: ['choose', 'select', 'pick', 'doctor', 'physician'],
   },
   {
-    id: 11,
+    id: 14,
     category: 'emergency',
     question: 'Do you offer emergency services?',
-    answer: 'We offer walk-in care for urgent medical concerns during our operating hours (8 AM - 8 PM, 7 days a week). For life-threatening emergencies, please call 911 or go to the nearest emergency room.',
+    answer: 'We offer walk-in care for urgent medical concerns during our operating hours. For life-threatening emergencies, please call 911 or go to the nearest emergency room.',
     keywords: ['emergency', 'urgent', 'immediate', 'critical', '911'],
   },
   {
-    id: 12,
-    category: 'specialties',
-    question: 'What specialty services do you have?',
-    answer: 'We specialize in Family Medicine, Dental Care, Minor Injuries, Acute Illnesses, and Medical Consultations. Our multilingual staff can serve patients in English, Tamil, Hindi, Urdu, Sylheti, Bengali, and Gujarati.',
-    keywords: ['specialty', 'center', 'excellence', 'family medicine', 'dental'],
-  },
-  {
-    id: 13,
-    category: 'diagnostics',
-    question: 'What diagnostic services are available?',
-    answer: 'We offer basic diagnostic services including health assessments, blood pressure monitoring, and can provide referrals for specialized tests like X-Ray, MRI, CT scans, and laboratory testing.',
-    keywords: ['diagnostic', 'test', 'x-ray', 'mri', 'scan', 'lab', 'blood'],
-  },
-  {
-    id: 14,
-    category: 'general',
-    question: 'How do I contact BSRV?',
-    answer: 'You can reach us by phone at 416-649-6388, by email at bsrvmedical@gmail.com, or visit us at 3430 Finch Ave E, Suite 6A, Scarborough, ON M1W 2R5.',
-    keywords: ['contact', 'phone', 'email', 'reach', 'call'],
-  },
-  {
     id: 15,
-    category: 'general',
-    question: 'Is BSRV a licensed medical facility?',
-    answer: 'Yes, BSRV Medical & Dental Office is a fully licensed medical facility. Our doctors are licensed with the College of Physicians and Surgeons of Ontario (CPSO) and maintain strict confidentiality of all patient records.',
-    keywords: ['license', 'privacy', 'confidential', 'secure', 'protected'],
+    category: 'services',
+    question: 'Do you offer walk-in services?',
+    answer: 'Yes! We are a walk-in clinic open 7 days a week. No appointment necessary for urgent medical concerns. You can also call 416-649-6388 to check current wait times.',
+    keywords: ['walk-in', 'urgent', 'immediate', 'no appointment'],
   },
   {
     id: 16,
     category: 'services',
-    question: 'Do you offer walk-in services?',
-    answer: 'Yes! We are a walk-in clinic open 7 days a week from 8 AM to 8 PM. No appointment necessary for urgent medical concerns. You can also call 416-649-6388 to check current wait times.',
-    keywords: ['walk-in', 'urgent', 'immediate', 'no appointment'],
-  },
-  {
-    id: 17,
-    category: 'services',
     question: 'What languages do your staff speak?',
-    answer: 'Our multilingual staff speaks English, Tamil, Hindi, Urdu, Sylheti, Bengali, and Gujarati. We are committed to serving our diverse community in their preferred language.',
+    answer: 'Our multilingual staff speaks English, Tamil, Hindi, Urdu, Sylheti, Bengali, and Gujarati. Dr. Ruhin Karim speaks English, Sylheti, Bengali, Urdu, and Hindi. Dr. Mohammed Aamir Saiyed speaks English, Hindi, Urdu, and Gujarati.',
     keywords: ['language', 'multilingual', 'speak', 'communication'],
   },
   {
-    id: 18,
+    id: 17,
     category: 'services',
     question: 'Do you treat minor injuries?',
     answer: 'Yes, we treat minor injuries including sprains, cuts, burns, and other acute injuries. Our experienced medical team provides quick and professional care.',
     keywords: ['injury', 'minor', 'sprain', 'cut', 'burn', 'treatment'],
   },
   {
+    id: 18,
+    category: 'general',
+    question: 'How do I contact BSRV?',
+    answer: 'You can reach us by phone at 416-649-6388, by email at bsrvmedical@gmail.com, or visit us at 3430 Finch Ave E, Suite 6A, Scarborough, ON M1W 2R5.',
+    keywords: ['contact', 'phone', 'email', 'reach', 'call'],
+  },
+  {
     id: 19,
+    category: 'general',
+    question: 'Is BSRV a licensed medical facility?',
+    answer: 'Yes, BSRV Medical & Dental is a fully licensed medical facility. Our doctors are licensed with the College of Physicians and Surgeons of Ontario (CPSO) and maintain strict confidentiality of all patient records.',
+    keywords: ['license', 'privacy', 'confidential', 'secure', 'protected'],
+  },
+  {
+    id: 20,
     category: 'general',
     question: 'Do you offer telemedicine services?',
     answer: 'We primarily provide in-person care. For follow-up consultations, please call us at 416-649-6388 to inquire about available options.',
     keywords: ['telemedicine', 'telehealth', 'video', 'online', 'virtual', 'remote'],
   },
   {
-    id: 20,
+    id: 21,
+    category: 'services',
+    question: 'Do you offer family medicine?',
+    answer: 'Yes, our Family Medicine department is led by Dr. Ruhin Karim (MD, FRCGP, CCFP) and Dr. Mohammed Aamir Saiyed (MD). We offer patient-centred and preventive care for individuals and families.',
+    keywords: ['family', 'medicine', 'doctor', 'physician', 'primary care'],
+  },
+  {
+    id: 22,
+    category: 'services',
+    question: 'Do you have nephrology services?',
+    answer: 'Yes, Dr. Pooja Kharbanda is our Nephrologist and Internist specializing in Chronic Kidney Disease, Glomerular Disorders, Hypertension Management, and Electrolyte Disturbances. She is available on Wednesdays from 11:00 AM to 8:00 PM.',
+    keywords: ['nephrology', 'kidney', 'nephrologist', 'dialysis'],
+  },
+  {
+    id: 23,
     category: 'general',
-    question: 'How experienced are your doctors?',
-    answer: 'Our doctors have extensive experience. Dr. Ruhin Karim is a UK-Trained Family Physician with FRCGP and CCFP certifications. Dr. Mohammed Aamir Saiyed completed his residency at Central Michigan University (2021-2024).',
-    keywords: ['experience', 'qualified', 'trained', 'expert', 'years'],
+    question: 'What is your phone number?',
+    answer: 'You can reach us at 416-649-6388. Call us to book appointments, check wait times, or speak with our staff.',
+    keywords: ['phone', 'call', 'number', 'telephone'],
+  },
+  {
+    id: 24,
+    category: 'general',
+    question: 'What is your email address?',
+    answer: 'You can reach us by email at bsrvmedical@gmail.com.',
+    keywords: ['email', 'mail', 'contact'],
   },
 ];
 
@@ -152,50 +180,48 @@ export const categories = [
   { id: 'doctors', name: 'Doctors', icon: '👨‍⚕️' },
   { id: 'insurance', name: 'Insurance', icon: '💳' },
   { id: 'emergency', name: 'Emergency', icon: '🚨' },
-  { id: 'specialties', name: 'Specialties', icon: '🔬' },
-  { id: 'diagnostics', name: 'Diagnostics', icon: '📊' },
 ];
 
 // Suggested questions for quick access
 export const suggestedQuestions = [
   'How do I book an appointment?',
   'What services do you offer?',
+  'Who are your doctors?',
   'What insurance do you accept?',
   'Where are you located?',
-  'Do you have pediatric services?',
-  'What are your operating hours?',
+  'What are your hours?',
 ];
 
 // Helper function to find relevant knowledge
 export const findRelevantKnowledge = (query) => {
   const normalizedQuery = query.toLowerCase();
-  
+
   // Score each knowledge item based on keyword matches
   const scored = knowledgeBase.map((item) => {
     let score = 0;
-    
+
     // Check keyword matches
     item.keywords.forEach((keyword) => {
       if (normalizedQuery.includes(keyword)) {
         score += 3;
       }
     });
-    
+
     // Check question word matches
     item.question.toLowerCase().split(' ').forEach((word) => {
       if (word.length > 3 && normalizedQuery.includes(word)) {
         score += 1;
       }
     });
-    
+
     // Check category matches
     if (normalizedQuery.includes(item.category)) {
       score += 2;
     }
-    
+
     return { ...item, score };
   });
-  
+
   // Return top matches with score > 0
   return scored
     .filter((item) => item.score > 0)
@@ -207,17 +233,17 @@ export const findRelevantKnowledge = (query) => {
 export const generateResponse = (query, relevantKnowledge) => {
   if (relevantKnowledge.length === 0) {
     return {
-      text: "I'm not sure about that specific question. For the best assistance, please contact us directly at +1 (555) 123-4567 or visit our Contact page. You can also browse our Services page to learn more about what we offer.",
+      text: "I'm not sure about that specific question. For the best assistance, please contact us directly at 416-649-6388 or email bsrvmedical@gmail.com. You can also visit us at 3430 Finch Ave E, Suite 6A, Scarborough, ON M1W 2R5.",
       sources: [],
     };
   }
-  
+
   const topMatch = relevantKnowledge[0];
   const sources = relevantKnowledge.map((k) => ({
     question: k.question,
     category: k.category,
   }));
-  
+
   return {
     text: topMatch.answer,
     sources,
