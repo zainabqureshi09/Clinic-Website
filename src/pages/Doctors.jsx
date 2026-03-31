@@ -145,17 +145,20 @@ const Doctors = () => {
                   </div>
 
                   {/* Image Section */}
-                  <div className="relative h-72 sm:h-80 overflow-hidden bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700">
-                    <img
-                      src={doctor.image}
-                      alt={doctor.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.target.src = 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop';
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-white/20 dark:via-slate-900/20 to-transparent" />
+                  <div className="relative h-80 sm:h-96 overflow-hidden bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700">
+                    <div className="absolute inset-0 flex items-center justify-center bg-emerald-50 dark:bg-slate-800">
+                      <img
+                        src={doctor.image}
+                        alt={doctor.name}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-slate-700 dark:to-slate-600"><div class="text-center"><div class="w-24 h-24 mx-auto mb-4 rounded-full bg-emerald-200 dark:bg-slate-600 flex items-center justify-center"><UserPlus className="w-12 h-12 text-emerald-600 dark:text-emerald-400" /></div><p class="text-gray-500 dark:text-gray-400 font-medium">Photo coming soon</p></div></div>';
+                        }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-white/30 dark:via-slate-900/30 to-transparent pointer-events-none" />
                   </div>
 
                   {/* Content Section */}
