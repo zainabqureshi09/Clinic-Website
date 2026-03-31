@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Send, MessageCircle } from 'lucide-react';
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Send } from 'lucide-react';
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -41,38 +41,47 @@ const Appointment = () => {
     });
   };
 
-  const sendToWhatsApp = (data) => {
-    // Clinic's WhatsApp number (replace with actual number)
-    const clinicPhone = '14166496388'; // BSRV clinic phone in international format
+  const sendToEmail = (data) => {
+    // Clinic's email address
+    const clinicEmail = 'bsrvmedical@gmail.com';
     
-    // Format the message
-    const message = `*New Appointment Request* 🏥
+    // Email subject
+    const subject = encodeURIComponent('New Appointment Request - BSRV Medical & Dental Office');
+    
+    // Format the email body
+    const emailBody = `NEW APPOINTMENT REQUEST
+=====================================
 
-*Patient Details:*
-• Name: ${data.name}
-• Phone: ${data.phone}
-• Email: ${data.email}
+PATIENT DETAILS:
+----------------
+Name: ${data.name}
+Phone: ${data.phone}
+Email: ${data.email}
 
-*Appointment Details:*
-• Department: ${data.department}
-• Doctor: ${data.doctor || 'Any Available Doctor'}
-• Date: ${data.date}
-• Time: ${data.time}
+APPOINTMENT DETAILS:
+--------------------
+Department: ${data.department}
+Doctor: ${data.doctor || 'Any Available Doctor'}
+Preferred Date: ${data.date}
+Preferred Time: ${data.time}
 
-*Additional Message:*
+ADDITIONAL MESSAGE:
+-------------------
 ${data.message || 'No additional message'}
 
----
-Sent from BSRV Medical & Dental Office Website`;
+=====================================
+Sent from BSRV Medical & Dental Office Website
+Date: ${new Date().toLocaleString()}
+`;
 
-    // Encode the message for URL
-    const encodedMessage = encodeURIComponent(message);
+    // Encode the email body
+    const encodedBody = encodeURIComponent(emailBody);
     
-    // Create WhatsApp URL
-    const whatsappUrl = `https://wa.me/${clinicPhone}?text=${encodedMessage}`;
+    // Create mailto URL
+    const mailtoUrl = `mailto:${clinicEmail}?subject=${subject}&body=${encodedBody}`;
     
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
+    // Open email client
+    window.location.href = mailtoUrl;
   };
 
   const handleSubmit = async (e) => {
@@ -82,8 +91,8 @@ Sent from BSRV Medical & Dental Office Website`;
     // Simulate processing delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // Send to WhatsApp
-    sendToWhatsApp(formData);
+    // Send to email
+    sendToEmail(formData);
 
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -217,15 +226,15 @@ Sent from BSRV Medical & Dental Office Website`;
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ type: 'spring', stiffness: 200 }}
-                      className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-6"
+                      className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center mb-6"
                     >
                       <CheckCircle className="w-10 h-10 text-white" />
                     </motion.div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Redirecting to WhatsApp...
+                      Opening Email Client...
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-6">
-                      Your appointment details are being sent. Please complete the process in WhatsApp.
+                      Your appointment details are ready. Please send the email to complete your request.
                     </p>
                     <motion.button
                       onClick={() => setIsSubmitted(false)}
@@ -366,7 +375,7 @@ Sent from BSRV Medical & Dental Office Website`;
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full py-4 rounded-xl font-semibold text-white transition-all duration-500 flex items-center justify-center space-x-2"
-                      style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)' }}
+                      style={{ background: 'linear-gradient(135deg, #059669 0%, #14b8a6 100%)' }}
                       whileHover={{ scale: isSubmitting ? 1 : 1.02, y: isSubmitting ? 0 : -3 }}
                       whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
                     >
@@ -381,14 +390,14 @@ Sent from BSRV Medical & Dental Office Website`;
                         </>
                       ) : (
                         <>
-                          <MessageCircle className="w-5 h-5" />
-                          <span>Send via WhatsApp</span>
+                          <Send className="w-5 h-5" />
+                          <span>Send Appointment Request</span>
                         </>
                       )}
                     </motion.button>
 
                     <p className="text-center text-gray-400 dark:text-gray-500 text-xs">
-                      Your information will be sent to our clinic via WhatsApp for quick response.
+                      Your appointment details will be sent to our clinic email: bsrvmedical@gmail.com
                     </p>
                   </form>
                 )}
