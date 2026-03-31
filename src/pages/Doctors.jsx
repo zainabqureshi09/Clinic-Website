@@ -11,9 +11,7 @@ import {
   Phone,
   Languages,
   UserPlus,
-  ArrowRight,
-  Shield,
-  Activity
+  ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -121,7 +119,7 @@ const Doctors = () => {
       {/* Doctors Grid */}
       <section className="py-20 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8">
             {doctors.map((doctor, index) => (
               <motion.div
                 key={doctor.name}
@@ -147,18 +145,16 @@ const Doctors = () => {
                   </div>
 
                   {/* Image Section */}
-                  <div className="relative h-80 overflow-hidden bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700">
-                    <div className="absolute inset-0 flex items-center justify-center p-8">
-                      <img
-                        src={doctor.image}
-                        alt={doctor.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        loading="lazy"
-                        onError={(e) => {
-                          e.target.src = 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop';
-                        }}
-                      />
-                    </div>
+                  <div className="relative h-72 sm:h-80 overflow-hidden bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700">
+                    <img
+                      src={doctor.image}
+                      alt={doctor.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.src = 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop';
+                      }}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-white/20 dark:via-slate-900/20 to-transparent" />
                   </div>
 
@@ -368,4 +364,18 @@ const Doctors = () => {
                   href="tel:4166496388"
                   className="px-8 py-4 rounded-full font-semibold border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300 flex items-center justify-center space-x-2"
                   whileHover={{ scale: 1.05, y: -3 }}
-      
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call (416) 649-6388</span>
+                </a>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Doctors;
