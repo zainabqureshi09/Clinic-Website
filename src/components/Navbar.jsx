@@ -54,8 +54,7 @@ const Navbar = () => {
             >
               <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-12 w-auto object-contain" />
               <div>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV</span>
-                <span className="text-xl font-bold text-emerald-600 dark:text-emerald-400"> Medical</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV Medical & Dental</span>
               </div>
             </Link>
 
@@ -106,10 +105,10 @@ const Navbar = () => {
                 to="tel:4166496388"
                 className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 whileHover={{ scale: 1.05 }}
-                aria-label="Call us at (416) 649-6388"
+                aria-label="Call us at 416-649-6388"
               >
                 <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">(416) 649-6388</span>
+                <span className="text-sm font-medium">416-649-6388</span>
               </Link>
               <Link
                 to="/appointment"
@@ -177,7 +176,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between mb-8">
                   <Link to="/" className="flex items-center space-x-3" aria-label="BSRV Medical & Dental Office Home">
                     <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-10 w-auto object-contain" />
-                    <span className="text-lg font-bold text-gray-900 dark:text-white">BSRV<span className="text-emerald-600 dark:text-emerald-400"> Medical</span></span>
+                    <span className="text-lg font-bold text-gray-900 dark:text-white">BSRV Medical & Dental</span>
                   </Link>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -215,7 +214,7 @@ const Navbar = () => {
                     Request Appointment
                   </Link>
                   <a href="tel:4166496388" className="block text-gray-600 dark:text-gray-400 text-center" aria-label="Call us">
-                    (416) 649-6388
+                    416-649-6388
                   </a>
                 </div>
               </div>

@@ -170,19 +170,19 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <a href="tel:4166496388" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>(416) 649-6388</span>
+                <span>416-649-6388</span>
               </a>
-              <a href="mailto:info@bsrv.ca" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <a href="mailto:bsrvmedical@gmail.com" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>info@bsrv.ca</span>
+                <span>bsrvmedical@gmail.com</span>
               </a>
               <div className="flex items-start space-x-3 text-gray-600 dark:text-gray-400">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>6A-3430 Finch Avenue E<br />Scarborough, ON M1W 2R5</span>
+                <span>3430 Finch Ave E, Suite 6A<br />Scarborough, ON M1W 2R5</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
                 <Clock className="w-4 h-4" />
-                <span>Mon-Sun: 8AM - 8PM</span>
+                <span>Open 7 Days: 8AM - 8PM</span>
               </div>
             </div>
 
