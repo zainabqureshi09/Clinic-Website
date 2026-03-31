@@ -155,17 +155,17 @@ const Appointment = () => {
             <div className="bg-gray-50 dark:bg-slate-900 rounded-2xl p-6 border border-gray-100 dark:border-slate-800">
               <h4 className="text-gray-900 dark:text-white font-semibold mb-4">Or Contact Us Directly</h4>
               <div className="space-y-3">
-                <a href="tel:+15551234567" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="tel:4166496388" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>416-649-6388</span>
                 </a>
-                <a href="mailto:appointments@medilux.com" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="mailto:bsrvmedical@gmail.com" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   <Mail className="w-5 h-5" />
-                  <span>appointments@medilux.com</span>
+                  <span>bsrvmedical@gmail.com</span>
                 </a>
                 <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
                   <Clock className="w-5 h-5" />
-                  <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+                  <span>Open 7 Days: 8:00 AM - 8:00 PM</span>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ export const useChatbot = () => {
     {
       id: 1,
       type: 'bot',
-      text: "Hello! I'm MediLux Assistant. How can I help you today? You can ask me about our services, doctors, appointments, insurance, and more.",
+      text: "Hello! I'm BSRV Assistant. How can I help you today? You can ask me about our services, doctors, appointments, insurance, and more.",
       timestamp: new Date(),
     },
   ]);
@@ -64,7 +64,7 @@ export const useChatbot = () => {
       {
         id: Date.now(),
         type: 'bot',
-        text: "Hello! I'm MediLux Assistant. How can I help you today? You can ask me about our services, doctors, appointments, insurance, and more.",
+        text: "Hello! I'm BSRV Assistant. How can I help you today? You can ask me about our services, doctors, appointments, insurance, and more.",
         timestamp: new Date(),
       },
     ]);

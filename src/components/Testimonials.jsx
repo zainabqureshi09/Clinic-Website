@@ -8,52 +8,52 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Anderson',
-      role: 'Patient since 2019',
+      name: 'Fatima Ahmed',
+      role: 'Patient since 2023',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'The level of care I received at MediLux was exceptional. From the moment I walked in, I felt valued and heard. Dr. Mitchell took the time to understand my concerns and created a treatment plan that truly worked for me.',
-      treatment: 'Cardiology',
+      text: 'The level of care I received at BSRV was exceptional. Dr. Karim took the time to understand my concerns and provided thorough care. The multilingual staff made me feel comfortable.',
+      treatment: 'Family Medicine',
     },
     {
-      name: 'Michael Thompson',
-      role: 'Patient since 2020',
+      name: 'Rajesh Patel',
+      role: 'Patient since 2023',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'After years of struggling with chronic pain, the team at MediLux finally gave me answers. Their diagnostic capabilities are world-class, and the orthopedic team expertise changed my life.',
-      treatment: 'Orthopedics',
+      text: 'Finally found a clinic where staff speaks my language! The team at BSRV is professional and caring. Dr. Saiyed is very knowledgeable and patient.',
+      treatment: 'Family Medicine',
     },
     {
-      name: 'Sarah Williams',
-      role: 'Patient since 2018',
+      name: 'Sarah Johnson',
+      role: 'Patient since 2024',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'As a mother of three, finding a pediatrician I trust was crucial. Dr. Thompson and her team have been amazing with my children. The facility is clean, modern, and the staff is incredibly friendly.',
-      treatment: 'Pediatrics',
+      text: 'As a mother, finding a family clinic I trust was crucial. BSRV has been amazing with my children. The facility is clean and the staff is incredibly friendly.',
+      treatment: 'Family Care',
     },
     {
-      name: 'David Chen',
-      role: 'Patient since 2021',
+      name: 'Michael Chen',
+      role: 'Patient since 2023',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'The dental care I received was outstanding. Dr. Roberts is not only skilled but also has a gentle approach that made my procedure completely painless. I actually look forward to my dental visits now!',
+      text: 'The dental care I received was outstanding. The dentist was skilled and gentle. I actually look forward to my dental visits now!',
       treatment: 'Dental Care',
     },
     {
-      name: 'Emily Martinez',
-      role: 'Patient since 2017',
+      name: 'Priya Sharma',
+      role: 'Patient since 2024',
       image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'Managing my diabetes was overwhelming until I came to MediLux. Their endocrinology team provided comprehensive care and education that empowered me to take control of my health.',
-      treatment: 'Endocrinology',
+      text: 'Managing my health concerns was overwhelming until I came to BSRV. The team provided comprehensive care that helped me take control of my health.',
+      treatment: 'Medical Consultation',
     },
     {
-      name: 'Robert Johnson',
-      role: 'Patient since 2022',
+      name: 'David Wong',
+      role: 'Patient since 2023',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'The neurological care I received was life-changing. After experiencing persistent headaches, Dr. Patel thorough evaluation and treatment plan gave me my quality of life back.',
-      treatment: 'Neurology',
+      text: 'The walk-in service is a lifesaver! No appointment needed and the wait time was minimal. The doctor was thorough and professional.',
+      treatment: 'Walk-In Clinic',
     },
   ];
 
@@ -126,7 +126,7 @@ const Testimonials = () => {
             What Our <span className="gradient-text">Patients</span> Say
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Real stories from real patients who have experienced the MediLux difference.
+            Real stories from real patients who have experienced the BSRV difference.
           </p>
         </motion.div>
 

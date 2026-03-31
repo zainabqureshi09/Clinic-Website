@@ -19,25 +19,25 @@ const Location = () => {
     {
       icon: MapPin,
       title: 'Our Location',
-      details: ['123 Healthcare Boulevard', 'Medical District, MD 20001', 'United States'],
+      details: ['3430 Finch Ave E, Suite 6A', 'Scarborough, ON, M1W 2R5', '(Warden & Finch Area)'],
       color: 'from-emerald-400 to-teal-500',
     },
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      details: ['416-649-6388'],
       color: 'from-teal-400 to-cyan-500',
     },
     {
       icon: Mail,
       title: 'Email Address',
-      details: ['info@medilux.com', 'appointments@medilux.com'],
+      details: ['bsrvmedical@gmail.com'],
       color: 'from-blue-400 to-indigo-500',
     },
     {
       icon: Clock,
       title: 'Working Hours',
-      details: ['Mon - Fri: 8:00 AM - 8:00 PM', 'Sat - Sun: 9:00 AM - 5:00 PM'],
+      details: ['Open 7 Days a Week', '8:00 AM - 8:00 PM'],
       color: 'from-amber-400 to-orange-500',
     },
   ];
@@ -227,7 +227,7 @@ const Location = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.6 }}
                 >
-                  <span className="text-gray-900 text-sm font-medium">MediLux Healthcare</span>
+                  <span className="text-gray-900 text-sm font-medium">BSRV Medical & Dental Office</span>
                 </motion.div>
 
                 <motion.div

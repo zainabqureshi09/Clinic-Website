@@ -148,7 +148,7 @@ const WhyChooseUs = () => {
               whileHover={{ scale: 1.05 }}
             >
               <Star className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span className="text-emerald-700 dark:text-emerald-400 text-sm font-medium">Why Choose MediLux</span>
+              <span className="text-emerald-700 dark:text-emerald-400 text-sm font-medium">Why Choose BSRV</span>
             </motion.div>
 
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -156,8 +156,7 @@ const WhyChooseUs = () => {
             </h2>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              For over 25 years, MediLux has been at the forefront of healthcare innovation, 
-              delivering exceptional patient outcomes through advanced medicine and compassionate care.
+              BSRV Medical & Dental Office is committed to providing comprehensive medical and dental care with a focus on patient satisfaction and excellent healthcare outcomes.
             </p>
 
             {/* Features List */}
