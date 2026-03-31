@@ -20,11 +20,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
+    { name: 'Our Doctors', href: '/doctors' },
     { name: 'Services', href: '/services' },
-    { name: 'Specialties', href: '/specialties' },
-    { name: 'Doctors', href: '/doctors' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Calendars', href: '/services' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -51,16 +50,12 @@ const Navbar = () => {
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
-              aria-label="MediLux Healthcare Home"
+              aria-label="BSRV Medical & Dental Office Home"
             >
-              <div className="relative">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">M</span>
-                </div>
-              </div>
+              <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-12 w-auto object-contain" />
               <div>
-                <span className="text-2xl font-bold text-gray-900 dark:text-white">Medi</span>
-                <span className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">Lux</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV</span>
+                <span className="text-xl font-bold text-emerald-600 dark:text-emerald-400"> Medical</span>
               </div>
             </Link>
 
@@ -108,13 +103,13 @@ const Navbar = () => {
               </motion.button>
 
               <Link
-                to="tel:+1234567890"
+                to="tel:4166496388"
                 className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 whileHover={{ scale: 1.05 }}
-                aria-label="Call us at +1 (555) 123-4567"
+                aria-label="Call us at (416) 649-6388"
               >
                 <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">+1 (555) 123-4567</span>
+                <span className="text-sm font-medium">(416) 649-6388</span>
               </Link>
               <Link
                 to="/appointment"
@@ -128,7 +123,7 @@ const Navbar = () => {
               >
                 <span className="flex items-center space-x-2">
                   <Calendar className="w-4 h-4" />
-                  <span>Book Now</span>
+                  <span>Request Appointment</span>
                 </span>
               </Link>
             </div>
@@ -180,14 +175,12 @@ const Navbar = () => {
             <div className="absolute right-0 top-0 bottom-0 w-80 bg-white dark:bg-slate-900 p-6 shadow-2xl">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-8">
-                  <Link to="/" className="flex items-center space-x-3" aria-label="MediLux Healthcare Home">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">M</span>
-                    </div>
-                    <span className="text-xl font-bold text-gray-900 dark:text-white">Medi<span className="text-emerald-600 dark:text-emerald-400">Lux</span></span>
+                  <Link to="/" className="flex items-center space-x-3" aria-label="BSRV Medical & Dental Office Home">
+                    <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-10 w-auto object-contain" />
+                    <span className="text-lg font-bold text-gray-900 dark:text-white">BSRV<span className="text-emerald-600 dark:text-emerald-400"> Medical</span></span>
                   </Link>
-                  <button 
-                    onClick={() => setIsMobileMenuOpen(false)} 
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="text-gray-700 dark:text-gray-300 p-2"
                     aria-label="Close menu"
                   >
@@ -219,10 +212,10 @@ const Navbar = () => {
                     style={{ background: 'linear-gradient(135deg, #059669 0%, #14b8a6 100%)' }}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Book Appointment
+                    Request Appointment
                   </Link>
-                  <a href="tel:+15551234567" className="block text-gray-600 dark:text-gray-400 text-center" aria-label="Call us">
-                    +1 (555) 123-4567
+                  <a href="tel:4166496388" className="block text-gray-600 dark:text-gray-400 text-center" aria-label="Call us">
+                    (416) 649-6388
                   </a>
                 </div>
               </div>

@@ -3,9 +3,9 @@ import { ArrowRight, Shield, Users, Award, Activity } from 'lucide-react';
 
 const Hero = () => {
   const stats = [
-    { icon: Users, value: '50K+', label: 'Happy Patients' },
-    { icon: Award, value: '25+', label: 'Years Experience' },
-    { icon: Shield, value: '100%', label: 'Satisfaction' },
+    { icon: Users, value: '7 Days', label: 'Open Weekly' },
+    { icon: Award, value: '12 Hrs', label: 'Daily (8AM-8PM)' },
+    { icon: Shield, value: '100%', label: 'Walk-ins Welcome' },
   ];
 
   return (
@@ -93,7 +93,7 @@ const Hero = () => {
               className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 mb-6"
             >
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-              <span className="text-emerald-700 dark:text-emerald-400 text-sm font-medium">Welcome to MediLux Healthcare</span>
+              <span className="text-emerald-700 dark:text-emerald-400 text-sm font-medium">Welcome to BSRV Medical & Dental Office</span>
             </motion.div>
 
             {/* Main Headline */}
@@ -103,9 +103,8 @@ const Hero = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-6"
             >
-              Your Family's{' '}
+              Your Partner in{' '}
               <span className="gradient-text">Health</span>{' '}
-              Starts Here
             </motion.h1>
 
             {/* Subheading */}
@@ -115,8 +114,7 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Experience world-class healthcare with cutting-edge technology, 
-              expert specialists, and personalized care that puts you first.
+              Professional medical and dental care in Toronto. Walk-ins welcome, open 7 days a week with multilingual staff ready to serve you.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -129,7 +127,7 @@ const Hero = () => {
               <motion.a
                 href="#appointment"
                 className="group relative overflow-hidden px-8 py-4 rounded-full font-semibold text-white transition-all duration-500"
-                style={{ 
+                style={{
                   background: 'linear-gradient(135deg, #059669 0%, #14b8a6 100%)',
                   boxShadow: '0 4px 30px rgba(5, 150, 105, 0.3)',
                 }}
@@ -137,17 +135,17 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="flex items-center justify-center space-x-2">
-                  <span>Book Appointment</span>
+                  <span>Request Appointment</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </motion.a>
               <motion.a
-                href="#services"
+                href="tel:4166496388"
                 className="px-8 py-4 rounded-full font-semibold border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Explore Services
+                Call to Book
               </motion.a>
             </motion.div>
 
@@ -238,8 +236,8 @@ const Hero = () => {
                     <Activity className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <div>
-                    <div className="text-gray-900 dark:text-white font-semibold">24/7 Care</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm">Always Available</div>
+                    <div className="text-gray-900 dark:text-white font-semibold">Walk-in Clinic</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">No Appointment Needed</div>
                   </div>
                 </div>
               </motion.div>
@@ -256,8 +254,8 @@ const Hero = () => {
                     <Award className="w-6 h-6 text-teal-600 dark:text-teal-400" />
                   </div>
                   <div>
-                    <div className="text-gray-900 dark:text-white font-semibold">Expert Doctors</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm">Board Certified</div>
+                    <div className="text-gray-900 dark:text-white font-semibold">Multilingual Staff</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">English, Tamil, Hindi, Urdu</div>
                   </div>
                 </div>
               </motion.div>

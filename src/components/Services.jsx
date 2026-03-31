@@ -1,64 +1,67 @@
 import { motion } from 'framer-motion';
-import { 
-  Stethoscope, 
-  Smile, 
-  Heart, 
-  Brain, 
-  Bone, 
-  Baby, 
-  Eye, 
+import {
+  Stethoscope,
+  Smile,
+  Heart,
   Activity,
-  ArrowRight
+  Bone,
+  Baby,
+  Eye,
+  Phone,
+  ArrowRight,
+  Clock,
+  Languages,
+  UserCheck
 } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: Stethoscope,
-      title: 'General Medicine',
-      description: 'Comprehensive primary care services for all ages with personalized treatment plans.',
+      title: 'Walk-In Clinic',
+      description: 'Open 7 days a week (8:00 AM – 8:00 PM). No appointment necessary for urgent medical concerns. Immediate care when you need it.',
       color: 'from-emerald-400 to-teal-500',
     },
     {
-      icon: Smile,
-      title: 'Dental Care',
-      description: 'Complete dental services from routine checkups to advanced cosmetic procedures.',
+      icon: Activity,
+      title: 'Minor Injuries',
+      description: 'Treatment for sprains, cuts, burns, and other minor injuries. Quick and professional care to get you back on your feet.',
       color: 'from-teal-400 to-cyan-500',
     },
     {
       icon: Heart,
-      title: 'Cardiology',
-      description: 'Expert heart care with state-of-the-art diagnostics and treatment options.',
+      title: 'Acute Illnesses',
+      description: 'Diagnosis and treatment for sudden illnesses including flu, fever, infections, and other acute medical conditions.',
       color: 'from-rose-400 to-pink-500',
     },
     {
-      icon: Brain,
-      title: 'Neurology',
-      description: 'Advanced neurological care for conditions affecting the brain and nervous system.',
+      icon: UserCheck,
+      title: 'Medical Consultations',
+      description: 'General medical consultations with experienced healthcare professionals. Comprehensive health assessments and advice.',
       color: 'from-violet-400 to-purple-500',
     },
     {
-      icon: Bone,
-      title: 'Orthopedics',
-      description: 'Specialized care for bones, joints, and muscles with minimally invasive options.',
+      icon: Smile,
+      title: 'Dental Care',
+      description: 'Complete dental services from routine checkups to emergency dental care. Your smile is our priority.',
       color: 'from-amber-400 to-orange-500',
     },
     {
-      icon: Baby,
-      title: 'Pediatrics',
-      description: 'Compassionate care for infants, children, and adolescents in a friendly environment.',
+      icon: Languages,
+      title: 'Multilingual Staff',
+      description: 'We speak your language! Staff available in English, Tamil, Hindi, Urdu, and more to serve our diverse community.',
       color: 'from-pink-400 to-rose-500',
     },
     {
-      icon: Eye,
-      title: 'Ophthalmology',
-      description: 'Complete eye care services including vision correction and surgical procedures.',
+      icon: Phone,
+      title: 'Call for Wait Times',
+      description: 'Avoid long waits! Call us at (416) 649-6388 to check current wait times before your visit to our clinic.',
       color: 'from-blue-400 to-indigo-500',
     },
     {
-      icon: Activity,
-      title: 'Diagnostics',
-      description: 'Advanced imaging and laboratory services for accurate and timely diagnoses.',
+      icon: Clock,
+      title: 'Extended Hours',
+      description: 'Open 12 hours daily from 8AM to 8PM, 7 days a week. Healthcare that fits your schedule, including weekends.',
       color: 'from-green-400 to-emerald-500',
     },
   ];
@@ -100,13 +103,12 @@ const Services = () => {
             <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             <span className="text-emerald-700 dark:text-emerald-400 text-sm font-medium">Our Services</span>
           </motion.div>
-          
+
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Comprehensive <span className="gradient-text">Healthcare</span> Services
+            Comprehensive <span className="gradient-text">Walk-In Clinic</span> Services
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            From routine checkups to specialized treatments, we offer a full spectrum 
-            of medical services under one roof.
+            From routine checkups to urgent care, we offer accessible healthcare with multilingual staff. No appointment needed.
           </p>
         </motion.div>
 
@@ -181,14 +183,14 @@ const Services = () => {
           className="text-center mt-12"
         >
           <motion.a
-            href="#appointment"
+            href="tel:4166496388"
             className="inline-flex items-center space-x-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-500"
             style={{ background: 'linear-gradient(135deg, #059669 0%, #14b8a6 100%)' }}
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span>View All Services</span>
-            <ArrowRight className="w-5 h-5" />
+            <Phone className="w-5 h-5" />
+            <span>Call (416) 649-6388</span>
           </motion.a>
         </motion.div>
       </div>

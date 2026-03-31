@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Users, Award, Activity } from 'lucide-react';
+import { ArrowRight, Shield, Users, Award, Activity, Clock, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const stats = [
-    { icon: Users, value: '50K+', label: 'Happy Patients' },
-    { icon: Award, value: '25+', label: 'Years Experience' },
-    { icon: Shield, value: '100%', label: 'Satisfaction' },
+    { icon: Clock, value: '7 Days', label: 'Open Weekly' },
+    { icon: Award, value: '12 Hrs', label: 'Daily (8AM-8PM)' },
+    { icon: Shield, value: '100%', label: 'Walk-ins Welcome' },
   ];
 
   return (
@@ -64,7 +64,7 @@ const Home = () => {
                 className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 mb-6"
               >
                 <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                <span className="text-emerald-700 dark:text-emerald-400 text-sm font-medium">Welcome to MediLux Healthcare</span>
+                <span className="text-emerald-700 dark:text-emerald-400 text-sm font-medium">Welcome to BSRV Medical & Dental Office</span>
               </motion.div>
 
               <motion.h1
@@ -73,9 +73,8 @@ const Home = () => {
                 transition={{ delay: 0.4, duration: 0.8 }}
                 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-6"
               >
-                Your Family's{' '}
+                Your Partner in{' '}
                 <span className="gradient-text">Health</span>{' '}
-                Starts Here
               </motion.h1>
 
               <motion.p
@@ -84,8 +83,7 @@ const Home = () => {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0"
               >
-                Experience world-class healthcare with cutting-edge technology, 
-                expert specialists, and personalized care that puts you first.
+                Professional medical and dental care in Toronto. Walk-ins welcome, open 7 days a week with multilingual staff ready to serve you.
               </motion.p>
 
               <motion.div
@@ -97,7 +95,7 @@ const Home = () => {
                 <Link
                   to="/appointment"
                   className="group relative overflow-hidden px-8 py-4 rounded-full font-semibold text-white transition-all duration-500"
-                  style={{ 
+                  style={{
                     background: 'linear-gradient(135deg, #059669 0%, #14b8a6 100%)',
                     boxShadow: '0 4px 30px rgba(5, 150, 105, 0.3)',
                   }}
@@ -105,18 +103,18 @@ const Home = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="flex items-center justify-center space-x-2">
-                    <span>Book Appointment</span>
+                    <span>Request Appointment</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
-                <Link
-                  to="/services"
+                <a
+                  href="tel:4166496388"
                   className="px-8 py-4 rounded-full font-semibold border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300"
                   whileHover={{ scale: 1.05, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Explore Services
-                </Link>
+                  Call to Book
+                </a>
               </motion.div>
 
               <motion.div
@@ -239,19 +237,19 @@ const Home = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Medical Services
+              Walk-In Clinic Services
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Comprehensive healthcare services under one roof
+              Open 7 days a week (8:00 AM – 8:00 PM). No appointment necessary for urgent medical concerns.
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'General Medicine', icon: Activity },
-              { title: 'Dental Care', icon: Shield },
-              { title: 'Cardiology', icon: Award },
-              { title: 'Pediatrics', icon: Users },
+              { title: 'Minor Injuries', icon: Activity },
+              { title: 'Acute Illnesses', icon: Shield },
+              { title: 'Medical Consultations', icon: Award },
+              { title: 'Multilingual Staff', icon: Users },
             ].map((service, index) => (
               <motion.div
                 key={service.title}
@@ -271,15 +269,15 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link
-              to="/services"
+            <a
+              href="tel:4166496388"
               className="inline-flex items-center space-x-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-500"
               style={{ background: 'linear-gradient(135deg, #059669 0%, #14b8a6 100%)' }}
               whileHover={{ scale: 1.05, y: -3 }}
             >
-              <span>View All Services</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+              <Phone className="w-5 h-5" />
+              <span>Call for Wait Times</span>
+            </a>
           </div>
         </div>
       </section>

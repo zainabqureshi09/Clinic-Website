@@ -19,22 +19,20 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
+    { name: 'Our Doctors', href: '/doctors' },
     { name: 'Services', href: '/services' },
-    { name: 'Specialties', href: '/specialties' },
-    { name: 'Doctors', href: '/doctors' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Calendars', href: '/services' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   const services = [
-    'General Medicine',
+    'Walk-In Clinic',
+    'Minor Injuries',
+    'Acute Illnesses',
+    'Medical Consultations',
     'Dental Care',
-    'Cardiology',
-    'Neurology',
-    'Orthopedics',
-    'Pediatrics',
-    'Ophthalmology',
-    'Diagnostics',
+    'Multilingual Staff',
+    'Extended Hours',
   ];
 
   const socialLinks = [
@@ -72,23 +70,20 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">M</span>
-              </div>
+              <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-12 w-auto object-contain" />
               <div>
-                <span className="text-2xl font-bold text-gray-900 dark:text-white">Medi</span>
-                <span className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">Lux</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV</span>
+                <span className="text-xl font-bold text-emerald-600 dark:text-emerald-400"> Medical</span>
               </div>
             </Link>
 
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              World-class healthcare with a personal touch. Your health is our 
-              priority, and we are committed to providing exceptional care.
+              Committed to providing comprehensive medical and dental care with a focus on patient satisfaction and excellent healthcare outcomes.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-6">
               {features.map((feature, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 text-xs text-gray-600 dark:text-gray-400"
                 >
@@ -173,21 +168,21 @@ const Footer = () => {
             <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Stay Connected</h4>
             
             <div className="space-y-3 mb-6">
-              <a href="tel:+15551234567" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <a href="tel:4166496388" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>(416) 649-6388</span>
               </a>
-              <a href="mailto:info@medilux.com" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <a href="mailto:info@bsrv.ca" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>info@medilux.com</span>
+                <span>info@bsrv.ca</span>
               </a>
               <div className="flex items-start space-x-3 text-gray-600 dark:text-gray-400">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>123 Healthcare Blvd<br />Medical District, MD 20001</span>
+                <span>6A-3430 Finch Avenue E<br />Scarborough, ON M1W 2R5</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
                 <Clock className="w-4 h-4" />
-                <span>Mon-Sat: 8AM - 8PM</span>
+                <span>Mon-Sun: 8AM - 8PM</span>
               </div>
             </div>
 
@@ -217,13 +212,13 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <motion.p 
+          <motion.p
             className="text-gray-500 dark:text-gray-400 text-sm text-center md:text-left"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            &copy; {new Date().getFullYear()} MediLux Healthcare. All rights reserved.
+            &copy; {new Date().getFullYear()} BSRV Medical & Dental Office. All rights reserved.
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-6">
