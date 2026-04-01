@@ -67,9 +67,9 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="BSRV Medical & Dental" className="h-12 w-auto object-contain" />
+              <img src="/logo.png" alt="BSRV Medical" className="h-12 w-auto object-contain" />
               <div>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV Medical & Dental</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV Medical</span>
               </div>
             </Link>
 
