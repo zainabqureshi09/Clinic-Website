@@ -27,11 +27,8 @@ const Footer = () => {
   const services = [
     'Walk-In Clinic',
     'Minor Injuries',
-    'Acute Illnesses',
     'Medical Consultations',
-    'Dental Care',
     'Multilingual Staff',
-    'Extended Hours',
   ];
 
   const socialLinks = [
