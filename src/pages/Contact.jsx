@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Navigation, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Navigation,
+  Facebook,
+  Twitter,
+  Instagram,
   Linkedin,
-  Car,
-  Train,
-  Bus,
   Send
 } from 'lucide-react';
 import { useState } from 'react';
@@ -49,12 +46,6 @@ const Contact = () => {
       details: ['Open 7 Days a Week', 'Monday to Friday: 9AM - 7PM', 'Saturday: 9AM - 5PM', 'Sunday: 10AM - 4PM'],
       color: 'from-amber-400 to-orange-500',
     },
-  ];
-
-  const transportOptions = [
-    { icon: Car, text: 'Free parking available' },
-    { icon: Bus, text: 'Bus routes 10, 25, 42' },
-    { icon: Train, text: 'Metro station 2 blocks away' },
   ];
 
   const handleChange = (e) => {
@@ -146,24 +137,6 @@ const Contact = () => {
                   </div>
                 </motion.div>
               ))}
-
-              {/* Transport Options */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-gray-100 dark:border-slate-800 shadow-sm"
-              >
-                <h4 className="text-gray-900 dark:text-white font-semibold mb-4">Getting Here</h4>
-                <div className="flex flex-wrap gap-4">
-                  {transportOptions.map((option, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 text-sm">
-                      <option.icon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                      <span>{option.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
 
               {/* Social Links */}
               <motion.div
