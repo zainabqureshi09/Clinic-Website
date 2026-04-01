@@ -281,7 +281,7 @@ const Home = () => {
               whileHover={{ scale: 1.05, y: -3 }}
             >
               <Phone className="w-5 h-5" />
-              <span>Call for Wait Times</span>
+              <span>Call to book</span>
             </a>
           </div>
         </div>
