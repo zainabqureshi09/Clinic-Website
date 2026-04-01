@@ -47,14 +47,14 @@ const Navbar = () => {
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-2 sm:space-x-3"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
               aria-label="BSRV Medical & Dental Office Home"
             >
-              <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-12 w-auto object-contain" />
+              <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-auto object-contain" />
               <div>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV Medical & Dental</span>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900 dark:text-white" style={{ fontFamily: "'Times New Roman', Times, serif" }}>BSRV Medical & Dental</span>
               </div>
             </Link>
 
