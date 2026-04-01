@@ -1,7 +1,7 @@
 {
-  "name": "MediLux Healthcare",
-  "short_name": "MediLux",
-  "description": "Premium family healthcare with world-class medical and dental services",
+  "name": "BSRV Medical & Dental Office",
+  "short_name": "BSRV Medical",
+  "description": "Professional medical and dental care in Toronto. Walk-in clinic open 7 days a week.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -16,5 +16,5 @@
     }
   ],
   "categories": ["health", "medical"],
-  "lang": "en-US"
+  "lang": "en-CA"
 }
