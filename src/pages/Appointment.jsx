@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,7 @@ const Appointment = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
 
   const departments = [
     'General Medicine',
@@ -34,60 +37,42 @@ const Appointment = () => {
   };
 
   const sendToEmail = (data) => {
-    // Clinic's email address
-    const clinicEmail = 'bsrvmedical@gmail.com';
-    
-    // Email subject
-    const subject = encodeURIComponent('New Appointment Request - BSRV Medical & Dental Office');
-    
-    // Format the email body
-    const emailBody = `NEW APPOINTMENT REQUEST
-=====================================
+    // Initialize EmailJS with your public key
+    emailjs.init(EMAILJS_CONFIG.publicKey);
 
-PATIENT DETAILS:
-----------------
-Name: ${data.name}
-Phone: ${data.phone}
-Email: ${data.email}
+    // Prepare email template parameters
+    const templateParams = {
+      patient_name: data.name,
+      patient_phone: data.phone,
+      patient_email: data.email,
+      department: data.department,
+      doctor: data.doctor || 'Any Available Doctor',
+      preferred_date: data.date,
+      preferred_time: data.time,
+      message: data.message || 'No additional message',
+      to_email: 'bsrvmedical@gmail.com',
+    };
 
-APPOINTMENT DETAILS:
---------------------
-Department: ${data.department}
-Doctor: ${data.doctor || 'Any Available Doctor'}
-Preferred Date: ${data.date}
-Preferred Time: ${data.time}
-
-ADDITIONAL MESSAGE:
--------------------
-${data.message || 'No additional message'}
-
-=====================================
-Sent from BSRV Medical & Dental Office Website
-Date: ${new Date().toLocaleString()}
-`;
-
-    // Encode the email body
-    const encodedBody = encodeURIComponent(emailBody);
-    
-    // Create mailto URL
-    const mailtoUrl = `mailto:${clinicEmail}?subject=${subject}&body=${encodedBody}`;
-    
-    // Open email client
-    window.location.href = mailtoUrl;
+    // Send email using EmailJS
+    return emailjs.send(
+      EMAILJS_CONFIG.serviceId,
+      EMAILJS_CONFIG.templateId,
+      templateParams
+    );
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    // Simulate processing delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    // Send to email
-    sendToEmail(formData);
-
-    setIsSubmitting(false);
-    setFormData({
+    try {
+      // Send email using EmailJS
+      await sendToEmail(formData);
+      
+      // Success
+      setSubmitStatus('success');
+      setFormData({
         name: '',
         email: '',
         phone: '',
@@ -97,6 +82,12 @@ Date: ${new Date().toLocaleString()}
         time: '',
         message: '',
       });
+    } catch (error) {
+      console.error('Failed to send appointment request:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses = `
@@ -354,6 +345,33 @@ Date: ${new Date().toLocaleString()}
                         </>
                       )}
                     </motion.button>
+
+                    {/* Success Message */}
+                    {submitStatus === 'success' && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-4 p-4 rounded-xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800"
+                      >
+                        <div className="flex items-center space-x-2 text-green-600 dark:text-green-400">
+                          <CheckCircle className="w-5 h-5" />
+                          <p className="text-sm font-medium">Appointment request sent successfully! We'll contact you within 24 hours.</p>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {/* Error Message */}
+                    {submitStatus === 'error' && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-4 p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"
+                      >
+                        <div className="flex items-center space-x-2 text-red-600 dark:text-red-400">
+                          <p className="text-sm font-medium">Failed to send request. Please call us at 416-649-6388.</p>
+                        </div>
+                      </motion.div>
+                    )}
                   </form>
               </div>
             </motion.div>
