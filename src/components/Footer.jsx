@@ -42,7 +42,6 @@ const Footer = () => {
   ];
 
   const features = [
-    { icon: Shield, text: 'HIPAA Compliant' },
     { icon: Award, text: 'Board Certified' },
     { icon: Heart, text: 'Patient First' },
   ];
