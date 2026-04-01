@@ -200,18 +200,6 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} BSRV Medical & Dental Office. All rights reserved.
           </motion.p>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            {['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Accessibility'].map((item) => (
-              <a 
-                key={item}
-                href="#"
-                className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 text-sm transition-colors"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
           <motion.div
             className="flex items-center space-x-2 text-gray-500 dark:text-gray-400 text-sm"
             initial={{ opacity: 0 }}
