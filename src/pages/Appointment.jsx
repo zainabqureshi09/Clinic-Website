@@ -10,6 +10,7 @@ const Appointment = () => {
     email: '',
     phone: '',
     department: '',
+    doctor: '',
     date: '',
     time: '',
     message: '',
@@ -21,6 +22,11 @@ const Appointment = () => {
     'General Medicine',
     'Nephrology',
   ];
+
+  const doctors = {
+    'General Medicine': ['Dr. Ruhin Karim', 'Dr. Mohammed Aamir Saiyed'],
+    'Nephrology': ['Dr. Pooja Kharbanda'],
+  };
 
   const timeSlots = [
     '04:30 PM', '05:00 PM', '05:30 PM', '06:00 PM',
@@ -42,6 +48,7 @@ const Appointment = () => {
       patient_phone: data.phone,
       patient_email: data.email,
       department: data.department,
+      doctor: data.doctor || 'Any Available Doctor',
       preferred_date: data.date,
       preferred_time: data.time,
       message: data.message || 'No additional message',
@@ -68,6 +75,7 @@ const Appointment = () => {
         email: '',
         phone: '',
         department: '',
+        doctor: '',
         date: '',
         time: '',
         message: '',
@@ -256,6 +264,26 @@ const Appointment = () => {
                           ))}
                         </select>
                       </div>
+                    </div>
+
+                    <div>
+                      <label className={labelClasses}>
+                        <User className="w-4 h-4 inline mr-1" />
+                        Choose Doctor (Optional)
+                      </label>
+                      <select
+                        name="doctor"
+                        value={formData.doctor}
+                        onChange={handleChange}
+                        className={inputClasses}
+                      >
+                        <option value="" className="bg-white dark:bg-slate-800">Any Available Doctor</option>
+                        {formData.department && doctors[formData.department]?.map((doc) => (
+                          <option key={doc} value={doc} className="bg-white dark:bg-slate-800">
+                            {doc}
+                          </option>
+                        ))}
+                      </select>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-5">
