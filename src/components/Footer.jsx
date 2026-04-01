@@ -9,6 +9,7 @@ import {
   Instagram,
   Linkedin,
   Youtube,
+  ArrowRight,
   Clock,
   Shield,
   Award

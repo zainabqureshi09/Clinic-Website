@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://medilux.com/sitemap.xml
+Sitemap: https://bsrv.ca/sitemap.xml
