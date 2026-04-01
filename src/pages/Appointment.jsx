@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Send } from 'lucide-react';
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, Send } from 'lucide-react';
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +14,6 @@ const Appointment = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const departments = [
     'General Medicine',
@@ -88,11 +87,7 @@ Date: ${new Date().toLocaleString()}
     sendToEmail(formData);
 
     setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
+    setFormData({
         name: '',
         email: '',
         phone: '',
@@ -102,7 +97,6 @@ Date: ${new Date().toLocaleString()}
         time: '',
         message: '',
       });
-    }, 5000);
   };
 
   const inputClasses = `
@@ -209,35 +203,7 @@ Date: ${new Date().toLocaleString()}
               transition={{ duration: 0.6 }}
             >
               <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-gray-100 dark:border-slate-800 shadow-2xl">
-                {isSubmitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
-                  >
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: 'spring', stiffness: 200 }}
-                      className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center mb-6"
-                    >
-                      <CheckCircle className="w-10 h-10 text-white" />
-                    </motion.div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Opening Email Client...
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-6">
-                      Your appointment details are ready. Please send the email to complete your request.
-                    </p>
-                    <motion.button
-                      onClick={() => setIsSubmitted(false)}
-                      className="text-emerald-600 dark:text-emerald-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
-                    >
-                      Book Another Appointment
-                    </motion.button>
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
                         <label className={labelClasses}>
@@ -389,7 +355,6 @@ Date: ${new Date().toLocaleString()}
                       )}
                     </motion.button>
                   </form>
-                )}
               </div>
             </motion.div>
           </div>
