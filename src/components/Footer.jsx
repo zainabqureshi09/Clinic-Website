@@ -68,7 +68,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-12 w-auto object-contain" />
+              <img src="/logo.png" alt="BSRV Medical & Dental" className="h-12 w-auto object-contain" />
               <div>
                 <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV</span>
                 <span className="text-xl font-bold text-emerald-600 dark:text-emerald-400"> Medical</span>
@@ -197,7 +197,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            &copy; {new Date().getFullYear()} BSRV Medical & Dental Office. All rights reserved.
+            &copy; {new Date().getFullYear()} BSRV Medical & Dental. All rights reserved.
           </motion.p>
 
           <motion.div
