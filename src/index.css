@@ -144,14 +144,14 @@ body {
 /* Neumorphism */
 .neumorphic {
   background: #ffffff;
-  box-shadow: 
+  box-shadow:
     8px 8px 24px rgba(0, 0, 0, 0.08),
     -8px -8px 24px rgba(255, 255, 255, 0.9);
 }
 
 .dark .neumorphic {
   background: #1e293b;
-  box-shadow: 
+  box-shadow:
     8px 8px 24px rgba(0, 0, 0, 0.3),
     -8px -8px 24px rgba(255, 255, 255, 0.05);
 }
@@ -286,7 +286,7 @@ body {
   );
 }
 
-/* Glass Effect - Updated for light theme */
+/* Glass Effect */
 .glass {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(16px);
