@@ -29,6 +29,7 @@ const Footer = () => {
     'Minor Injuries',
     'Medical Consultations',
     'Multilingual Staff',
+    'Patient Satisfaction Guarantee',
   ];
 
   const socialLinks = [
