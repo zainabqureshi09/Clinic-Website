@@ -149,10 +149,10 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative hidden lg:block"
             >
-              <div className="relative w-full h-[600px]">
+              <div className="relative w-full h-[500px] xl:h-[600px]">
                 {/* Main Circular Image - Clinic Exam Room */}
                 <motion.div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
@@ -165,7 +165,7 @@ const Home = () => {
 
                 {/* Floating Image 1 - Clinic Office Interior */}
                 <motion.div
-                  className="absolute top-20 right-0 w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating"
+                  className="absolute top-16 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8 }}
@@ -179,7 +179,7 @@ const Home = () => {
 
                 {/* Floating Image 2 - Clinic Waiting Room */}
                 <motion.div
-                  className="absolute bottom-32 left-0 w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating-delayed"
+                  className="absolute bottom-24 left-0 w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating-delayed"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1 }}
@@ -193,36 +193,36 @@ const Home = () => {
 
                 {/* Floating Card 1 */}
                 <motion.div
-                  className="absolute top-40 left-0 px-6 py-4 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700 floating-delayed"
+                  className="absolute top-32 left-0 px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700 floating-delayed"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.2 }}
                 >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                      <Activity className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                  <div className="flex items-center space-x-2 sm:space-x-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600 dark:text-emerald-400" />
                     </div>
                     <div>
-                      <div className="text-gray-900 dark:text-white font-semibold">Walk-in Clinic</div>
-                      <div className="text-gray-500 dark:text-gray-400 text-sm">No Appointment Needed</div>
+                      <div className="text-sm sm:text-base md:text-lg text-gray-900 dark:text-white font-semibold">Walk-in Clinic</div>
+                      <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">No Appointment Needed</div>
                     </div>
                   </div>
                 </motion.div>
 
                 {/* Floating Card 2 */}
                 <motion.div
-                  className="absolute bottom-20 right-0 px-6 py-4 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700 floating"
+                  className="absolute bottom-16 right-0 px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-4 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700 floating"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.4 }}
                 >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
-                      <Award className="w-6 h-6 text-teal-600 dark:text-teal-400" />
+                  <div className="flex items-center space-x-2 sm:space-x-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center">
+                      <Award className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600 dark:text-teal-400" />
                     </div>
                     <div>
-                      <div className="text-gray-900 dark:text-white font-semibold">Multilingual Staff</div>
-                      <div className="text-gray-500 dark:text-gray-400 text-sm">English, Tamil, Hindi, Urdu</div>
+                      <div className="text-sm sm:text-base md:text-lg text-gray-900 dark:text-white font-semibold">Multilingual Staff</div>
+                      <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">English, Tamil, Hindi, Urdu</div>
                     </div>
                   </div>
                 </motion.div>

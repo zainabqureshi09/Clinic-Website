@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
@@ -10,11 +11,23 @@ import Testimonials from './pages/Testimonials';
 import Appointment from './pages/Appointment';
 import Contact from './pages/Contact';
 
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider>
         <Router>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
