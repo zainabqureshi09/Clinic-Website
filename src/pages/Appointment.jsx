@@ -18,13 +18,6 @@ const Appointment = () => {
 
   const departments = [
     'General Medicine',
-    'Dental Care',
-    'Cardiology',
-    'Neurology',
-    'Orthopedics',
-    'Pediatrics',
-    'Ophthalmology',
-    'Endocrinology',
     'Nephrology',
   ];
 
@@ -203,7 +196,7 @@ Date: ${new Date().toLocaleString()}
                   </a>
                   <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
                     <Clock className="w-5 h-5" />
-                    <span>Open 7 Days: 8:00 AM - 8:00 PM</span>
+                    <span>Open 7 Days: Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM</span>
                   </div>
                 </div>
               </div>
@@ -395,10 +388,6 @@ Date: ${new Date().toLocaleString()}
                         </>
                       )}
                     </motion.button>
-
-                    <p className="text-center text-gray-400 dark:text-gray-500 text-xs">
-                      Your appointment details will be sent to our clinic email: bsrvmedical@gmail.com
-                    </p>
                   </form>
                 )}
               </div>

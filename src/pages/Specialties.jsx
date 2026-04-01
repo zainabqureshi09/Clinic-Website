@@ -1,30 +1,19 @@
 import { motion } from 'framer-motion';
-import { Dna, Droplets, Microscope, Shield, ArrowRight } from 'lucide-react';
+import { Droplets, Microscope, Shield, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Specialties = () => {
   const specialties = [
     {
-      icon: Dna,
-      title: 'Endocrinology',
-      description: 'Expert care for hormonal disorders including diabetes, thyroid conditions, and metabolic diseases.',
-      features: [
-        'Diabetes Management',
-        'Thyroid Disorders',
-        'Hormone Therapy',
-        'Metabolic Care',
-      ],
-      gradient: 'from-emerald-500 to-teal-600',
-    },
-    {
       icon: Droplets,
-      title: 'Nephrology',
-      description: 'Comprehensive kidney care with advanced dialysis services and transplant coordination.',
+      title: 'Nephrology (Kidney Health)',
+      description: 'Comprehensive kidney care with advanced diagnostic and treatment services for all stages of kidney disease.',
       features: [
-        'Kidney Disease Treatment',
-        'Dialysis Services',
-        'Transplant Care',
+        'Chronic Kidney Disease – Stages 1–5',
         'Hypertension Management',
+        'Kidney Stones Prevention',
+        'Electrolyte Disorders',
+        'Dialysis Support',
       ],
       gradient: 'from-teal-500 to-cyan-600',
     },
@@ -61,8 +50,8 @@ const Specialties = () => {
 
       {/* Specialties Grid */}
       <section className="py-20 bg-white dark:bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-1 gap-8">
             {specialties.map((specialty, index) => (
               <motion.div
                 key={specialty.title}
@@ -128,10 +117,10 @@ const Specialties = () => {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { value: '15+', label: 'Specialty Centers' },
-              { value: '100+', label: 'Expert Specialists' },
-              { value: '50K+', label: 'Procedures Annually' },
-              { value: '98%', label: 'Success Rate' },
+              { value: '2', label: 'Core Specialties' },
+              { value: '50K+', label: 'Patients Served' },
+              { value: '25+', label: 'Expert Doctors' },
+              { value: '98%', label: 'Patient Satisfaction' },
             ].map((stat) => (
               <motion.div
                 key={stat.label}

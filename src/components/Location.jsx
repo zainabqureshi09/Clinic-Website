@@ -37,7 +37,7 @@ const Location = () => {
     {
       icon: Clock,
       title: 'Working Hours',
-      details: ['Open 7 Days a Week', '8:00 AM - 8:00 PM'],
+      details: ['Open 7 Days a Week', 'Monday to Friday: 9AM - 7PM', 'Saturday: 9AM - 5PM', 'Sunday: 10AM - 4PM'],
       color: 'from-amber-400 to-orange-500',
     },
   ];
@@ -172,95 +172,19 @@ const Location = () => {
             className="relative"
           >
             <div className="relative h-full min-h-[500px] rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-2xl">
-              <div 
-                className="absolute inset-0"
-                style={{
-                  background: 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)',
-                }}
-              >
-                <div className="absolute inset-0 opacity-20">
-                  <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#059669" strokeWidth="0.5"/>
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#grid)" />
-                  </svg>
-                </div>
-
-                <motion.div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ type: 'spring', stiffness: 200, delay: 0.3 }}
-                >
-                  <div className="relative">
-                    <motion.div
-                      className="absolute inset-0 rounded-full bg-emerald-500/30"
-                      animate={{ scale: [1, 2, 3], opacity: [0.5, 0.2, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      style={{ width: '80px', height: '80px', marginLeft: '-20px', marginTop: '-20px' }}
-                    />
-                    <motion.div
-                      className="absolute inset-0 rounded-full bg-emerald-500/30"
-                      animate={{ scale: [1, 2, 3], opacity: [0.5, 0.2, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.7 }}
-                      style={{ width: '80px', height: '80px', marginLeft: '-20px', marginTop: '-20px' }}
-                    />
-                    
-                    <div className="relative w-10 h-10">
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full shadow-lg" />
-                      <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
-                        <MapPin className="w-5 h-5 text-emerald-600" />
-                      </div>
-                      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-emerald-400 to-teal-500 rotate-45" />
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 mt-20 px-4 py-2 rounded-full bg-white shadow-lg whitespace-nowrap"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.6 }}
-                >
-                  <span className="text-gray-900 text-sm font-medium">BSRV Medical & Dental Office</span>
-                </motion.div>
-
-                <motion.div
-                  className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-emerald-300/30 blur-2xl"
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-                  transition={{ duration: 8, repeat: Infinity }}
-                />
-                <motion.div
-                  className="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full bg-teal-300/30 blur-2xl"
-                  animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
-                  transition={{ duration: 10, repeat: Infinity }}
-                />
-              </div>
-
-              <div className="absolute bottom-4 right-4 flex flex-col space-y-2">
-                <motion.button
-                  className="w-10 h-10 rounded-lg bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-emerald-50 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <span className="text-xl font-bold">+</span>
-                </motion.button>
-                <motion.button
-                  className="w-10 h-10 rounded-lg bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-emerald-50 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <span className="text-xl font-bold">-</span>
-                </motion.button>
-              </div>
-
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.0599999999995!2d-79.2784!3d43.7956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d0b8a5e7c7e7%3A0x1234567890abcdef!2s3430%20Finch%20Ave%20E%2C%20Scarborough%2C%20ON%20M1W%202R5!5e0!3m2!1sen!2sca!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 w-full h-full"
+                title="BSRV Medical & Dental Office Location"
+              />
               <motion.a
-                href="https://maps.google.com"
+                href="https://www.google.com/maps?q=3430+Finch+Ave+E+Toronto,+ON+M1W+2R5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute top-4 left-4 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-medium flex items-center space-x-2 shadow-lg"

@@ -263,8 +263,10 @@ const WhyChooseUs = () => {
                       <Shield className="w-7 h-7 text-white" />
                     </motion.div>
                     <div>
-                      <h4 className="text-gray-900 dark:text-white font-semibold">100% Satisfaction Guarantee</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Your health is our priority</p>
+                      <h4 className="text-gray-900 dark:text-white font-semibold">Patient Satisfaction Guarantee</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">
+                        We are committed to delivering comprehensive healthcare services, with a focus on patient satisfaction and achieving excellent clinical outcomes.
+                      </p>
                     </div>
                   </div>
                   <motion.a

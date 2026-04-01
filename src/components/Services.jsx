@@ -16,7 +16,7 @@ const Services = () => {
     {
       icon: Stethoscope,
       title: 'Walk-In Clinic',
-      description: 'Open 7 days a week (8:00 AM – 8:00 PM). No appointment necessary for urgent medical concerns. Immediate care when you need it.',
+      description: 'Open 7 days a week. Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM. No appointment necessary for urgent medical concerns. Immediate care when you need it.',
       color: 'from-emerald-400 to-teal-500',
     },
     {
@@ -58,7 +58,7 @@ const Services = () => {
     {
       icon: Clock,
       title: 'Extended Hours',
-      description: 'Open 12 hours daily from 8AM to 8PM, 7 days a week. Healthcare that fits your schedule, including weekends.',
+      description: 'Open 7 days a week. Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM. Healthcare that fits your schedule, including weekends.',
       color: 'from-green-400 to-emerald-500',
     },
   ];

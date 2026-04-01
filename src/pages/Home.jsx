@@ -245,7 +245,7 @@ const Home = () => {
               Walk-In Clinic Services
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Open 7 days a week (8:00 AM – 8:00 PM). No appointment necessary for urgent medical concerns.
+              Open 7 days a week. Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM. No appointment necessary for urgent medical concerns.
             </p>
           </motion.div>
 
