@@ -284,7 +284,7 @@ const Contact = () => {
             className="relative h-[500px] rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-2xl"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.0599999999995!2d-79.2784!3d43.7956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d0b8a5e7c7e7%3A0x1234567890abcdef!2s3430%20Finch%20Ave%20E%2C%20Scarborough%2C%20ON%20M1W%202R5!5e0!3m2!1sen!2sca!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.30943582457!2d-79.37805805!3d43.7182412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d385dfb37c09%3A0x4a5071ebcaea2fa9!2sBSRV%20Medical%20%26%20Dental%20Office!5e0!3m2!1sen!2s!4v1775032939018!5m2!1sen!2s"
               width="100%"
               height="100%"
               style={{ border: 0 }}
