@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Users, Award, Activity, Clock, Phone } from 'lucide-react';
+import { ArrowRight, Shield, Users, Award, Activity, Clock, Phone, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const stats = [
     { icon: Clock, value: '7 Days', label: 'Open Weekly' },
-    { icon: Award, value: '12 Hrs', label: 'Daily (8AM-8PM)' },
+    { icon: Heart, value: '100%', label: 'Patient Satisfaction' },
     { icon: Shield, value: '100%', label: 'Walk-ins Welcome' },
   ];
 

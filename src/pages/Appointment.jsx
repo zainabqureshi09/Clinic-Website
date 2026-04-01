@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, Send } from 'lucide-react';
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Send } from 'lucide-react';
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
