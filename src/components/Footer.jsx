@@ -34,7 +34,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Facebook, href: 'https://www.facebook.com/people/BSRV-Medical-and-Dental-Office/61584460004700/', label: 'Facebook' },
     { icon: Twitter, href: '#', label: 'Twitter (X)' },
     { icon: Instagram, href: '#', label: 'Instagram' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
