@@ -77,7 +77,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              Committed to providing comprehensive medical and dental care with a focus on patient satisfaction and excellent healthcare outcomes.
+              We are committed to delivering comprehensive healthcare services, with a focus on patient satisfaction and achieving excellent clinical outcomes.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-6">
