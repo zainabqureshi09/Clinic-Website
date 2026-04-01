@@ -10,13 +10,12 @@ const Appointment = () => {
     email: '',
     phone: '',
     department: '',
-    doctor: '',
     date: '',
     time: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const departments = [
     'General Medicine',
@@ -36,24 +35,20 @@ const Appointment = () => {
     });
   };
 
-  const sendToEmail = (data) => {
-    // Initialize EmailJS with your public key
+  const sendEmail = async (data) => {
     emailjs.init(EMAILJS_CONFIG.publicKey);
 
-    // Prepare email template parameters
     const templateParams = {
       patient_name: data.name,
       patient_phone: data.phone,
       patient_email: data.email,
       department: data.department,
-      doctor: data.doctor || 'Any Available Doctor',
       preferred_date: data.date,
       preferred_time: data.time,
       message: data.message || 'No additional message',
       to_email: 'bsrvmedical@gmail.com',
     };
 
-    // Send email using EmailJS
     return emailjs.send(
       EMAILJS_CONFIG.serviceId,
       EMAILJS_CONFIG.templateId,
@@ -67,23 +62,19 @@ const Appointment = () => {
     setSubmitStatus(null);
 
     try {
-      // Send email using EmailJS
-      await sendToEmail(formData);
-      
-      // Success
+      await sendEmail(formData);
       setSubmitStatus('success');
       setFormData({
         name: '',
         email: '',
         phone: '',
         department: '',
-        doctor: '',
         date: '',
         time: '',
         message: '',
       });
     } catch (error) {
-      console.error('Failed to send appointment request:', error);
+      console.error('Failed to send:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -91,7 +82,7 @@ const Appointment = () => {
   };
 
   const inputClasses = `
-    w-full px-5 py-4 rounded-xl 
+    w-full px-5 py-4 rounded-xl
     bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700
     text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-slate-500
     transition-all duration-300

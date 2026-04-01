@@ -11,7 +11,7 @@ import Testimonials from './pages/Testimonials';
 import Appointment from './pages/Appointment';
 import Contact from './pages/Contact';
 
-// Scroll to top on route change
+// Scroll to top when route changes
 function ScrollToTop() {
   const { pathname } = useLocation();
 
