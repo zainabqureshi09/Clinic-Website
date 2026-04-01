@@ -20,7 +20,7 @@ const DoctorProfile = () => {
     description: 'Dr. Pooja Kharbanda is a Nephrologist and Internist specializing in the management of complex kidney and systemic conditions. She completed her medical degree at Aureus University School of Medicine, followed by Internal Medicine residency training in Pennsylvania and a Nephrology fellowship at Jefferson Einstein Hospital in Philadelphia.',
     availability: {
       day: 'Wednesday',
-      time: '11:00 AM to 8:00 PM',
+      time: '10:00 AM to 7:00 PM',
     },
     education: [
       {
