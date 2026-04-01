@@ -149,10 +149,10 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative mt-8 lg:mt-0"
             >
-              <div className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px]">
+              <div className="relative w-full h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px]">
                 {/* Main Circular Image - Clinic Exam Room */}
                 <motion.div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
@@ -165,7 +165,7 @@ const Home = () => {
 
                 {/* Floating Image 1 - Clinic Office Interior */}
                 <motion.div
-                  className="absolute top-8 right-0 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 xl:w-48 xl:h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating"
+                  className="absolute top-8 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8 }}
@@ -179,7 +179,7 @@ const Home = () => {
 
                 {/* Floating Image 2 - Clinic Waiting Room */}
                 <motion.div
-                  className="absolute bottom-16 left-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating-delayed"
+                  className="absolute bottom-16 left-0 w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating-delayed"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1 }}
