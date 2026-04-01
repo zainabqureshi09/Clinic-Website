@@ -9,7 +9,6 @@ import {
   Instagram,
   Linkedin,
   Youtube,
-  ArrowRight,
   Clock,
   Shield,
   Award
@@ -166,8 +165,8 @@ const Footer = () => {
             transition={{ delay: 0.3 }}
           >
             <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Stay Connected</h4>
-            
-            <div className="space-y-3 mb-6">
+
+            <div className="space-y-3">
               <a href="tel:4166496388" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>416-649-6388</span>
@@ -184,25 +183,6 @@ const Footer = () => {
                 <Clock className="w-4 h-4" />
                 <span>Open 7 Days: Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM</span>
               </div>
-            </div>
-
-            <div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">Subscribe to our newsletter</p>
-              <form className="flex" onSubmit={(e) => e.preventDefault()}>
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-4 py-3 rounded-l-xl bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10"
-                />
-                <motion.button
-                  type="submit"
-                  className="px-4 py-3 rounded-r-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-              </form>
             </div>
           </motion.div>
         </div>
