@@ -111,14 +111,14 @@ const Home = () => {
                   href="tel:4166496388"
                   className="group relative inline-flex items-center justify-center space-x-3 px-10 py-5 rounded-full font-semibold text-white overflow-hidden transition-all duration-500 backdrop-blur-md"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(14, 165, 233, 0.85) 0%, rgba(56, 189, 248, 0.85) 25%, rgba(125, 211, 252, 0.85) 50%, rgba(56, 189, 248, 0.85) 75%, rgba(14, 165, 233, 0.85) 100%)',
-                    boxShadow: '0 8px 32px rgba(14, 165, 233, 0.4), 0 0 60px rgba(56, 189, 248, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                    background: 'linear-gradient(135deg, rgba(5, 150, 105, 0.85) 0%, rgba(16, 185, 138, 0.85) 25%, rgba(20, 184, 166, 0.85) 50%, rgba(16, 185, 138, 0.85) 75%, rgba(5, 150, 105, 0.85) 100%)',
+                    boxShadow: '0 8px 32px rgba(5, 150, 105, 0.4), 0 0 60px rgba(16, 185, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                   }}
                   whileHover={{ 
                     scale: 1.08, 
                     y: -5, 
-                    boxShadow: '0 20px 60px rgba(14, 165, 233, 0.6), 0 0 100px rgba(56, 189, 248, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
+                    boxShadow: '0 20px 60px rgba(5, 150, 105, 0.6), 0 0 100px rgba(16, 185, 138, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -127,7 +127,7 @@ const Home = () => {
                   
                   {/* Outer Glow Ring */}
                   <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{
-                    background: 'radial-gradient(circle, rgba(56, 189, 248, 0.6) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(16, 185, 138, 0.6) 0%, transparent 70%)',
                     filter: 'blur(20px)',
                   }} />
                   
