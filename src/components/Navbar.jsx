@@ -59,12 +59,12 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center space-x-6 lg:space-x-8" role="menubar">
+            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8" role="menubar">
               {navLinks.map((link, index) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`relative text-xs sm:text-sm md:text-base font-medium transition-colors duration-300 ${
+                  className={`relative text-sm lg:text-base font-medium transition-colors duration-300 ${
                     isActive(link.href)
                       ? 'text-emerald-600 dark:text-emerald-400'
                       : 'text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400'
@@ -89,7 +89,7 @@ const Navbar = () => {
             </div>
 
             {/* Right Side Actions */}
-            <div className="hidden xl:flex items-center space-x-3 lg:space-x-4">
+            <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
               {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}
