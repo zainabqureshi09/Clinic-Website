@@ -109,7 +109,7 @@ const Home = () => {
                 </Link>
                 <a
                   href="tel:4166496388"
-                  className="group inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300"
+                  className="group relative inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300"
                   style={{
                     background: 'linear-gradient(135deg, #0ea5e9 0%, #38bdf8 25%, #7dd3fc 50%, #38bdf8 75%, #0ea5e9 100%)',
                     boxShadow: '0 4px 30px rgba(14, 165, 233, 0.4), 0 0 60px rgba(56, 189, 248, 0.3)',
@@ -117,8 +117,14 @@ const Home = () => {
                   whileHover={{ scale: 1.05, y: -3, boxShadow: '0 10px 50px rgba(14, 165, 233, 0.5), 0 0 80px rgba(56, 189, 248, 0.4)' }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <img src="/logo.png" alt="BSRV Dental Logo" className="w-6 h-6 object-contain" />
-                  <span>BSRV DENTAL</span>
+                  {/* Shiny Effect Overlay */}
+                  <span className="absolute inset-0 overflow-hidden rounded-full">
+                    <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" style={{
+                      background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+                    }} />
+                  </span>
+                  <img src="/logo.png" alt="BSRV Dental Logo" className="w-6 h-6 object-contain relative z-10" />
+                  <span className="relative z-10">BSRV DENTAL</span>
                 </a>
               </motion.div>
 
@@ -255,7 +261,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
               Our Facility
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -336,7 +342,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
               Walk-In Clinic Services
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">

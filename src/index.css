@@ -16,12 +16,12 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Premium Lobster Font */
+/* Premium Heading Font */
 .premium-heading {
-  font-family: 'Lobster', cursive;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   background: linear-gradient(135deg, #059669 0%, #10b98a 25%, #14b8a6 50%, #2dd4bf 75%, #5eead4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
