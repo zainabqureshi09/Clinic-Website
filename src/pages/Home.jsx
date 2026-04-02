@@ -109,22 +109,55 @@ const Home = () => {
                 </Link>
                 <a
                   href="tel:4166496388"
-                  className="group relative inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300"
+                  className="group relative inline-flex items-center justify-center space-x-3 px-10 py-5 rounded-full font-semibold text-white overflow-hidden transition-all duration-500 backdrop-blur-md"
                   style={{
-                    background: 'linear-gradient(135deg, #0ea5e9 0%, #38bdf8 25%, #7dd3fc 50%, #38bdf8 75%, #0ea5e9 100%)',
-                    boxShadow: '0 4px 30px rgba(14, 165, 233, 0.4), 0 0 60px rgba(56, 189, 248, 0.3)',
+                    background: 'linear-gradient(135deg, rgba(14, 165, 233, 0.85) 0%, rgba(56, 189, 248, 0.85) 25%, rgba(125, 211, 252, 0.85) 50%, rgba(56, 189, 248, 0.85) 75%, rgba(14, 165, 233, 0.85) 100%)',
+                    boxShadow: '0 8px 32px rgba(14, 165, 233, 0.4), 0 0 60px rgba(56, 189, 248, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
                   }}
-                  whileHover={{ scale: 1.05, y: -3, boxShadow: '0 10px 50px rgba(14, 165, 233, 0.5), 0 0 80px rgba(56, 189, 248, 0.4)' }}
+                  whileHover={{ 
+                    scale: 1.08, 
+                    y: -5, 
+                    boxShadow: '0 20px 60px rgba(14, 165, 233, 0.6), 0 0 100px rgba(56, 189, 248, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
+                  }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {/* Shiny Effect Overlay */}
+                  {/* Animated Background Gradient */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
+                  
+                  {/* Outer Glow Ring */}
+                  <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{
+                    background: 'radial-gradient(circle, rgba(56, 189, 248, 0.6) 0%, transparent 70%)',
+                    filter: 'blur(20px)',
+                  }} />
+                  
+                  {/* Shiny Sweep Effect */}
                   <span className="absolute inset-0 overflow-hidden rounded-full">
-                    <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" style={{
-                      background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+                    <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" style={{
+                      background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent)',
                     }} />
                   </span>
-                  <img src="/logo.png" alt="BSRV Dental Logo" className="w-6 h-6 object-contain relative z-10" />
-                  <span className="relative z-10">BSRV DENTAL</span>
+                  
+                  {/* Inner Shine Border */}
+                  <span className="absolute inset-0 rounded-full" style={{
+                    boxShadow: 'inset 0 2px 10px rgba(255, 255, 255, 0.2), inset 0 -2px 10px rgba(0, 0, 0, 0.1)',
+                  }} />
+                  
+                  {/* Content */}
+                  <img src="/logo.png" alt="BSRV Dental Logo" className="w-8 h-8 object-contain relative z-10 drop-shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+                  <span className="relative z-10 tracking-wide">BSRV DENTAL</span>
+                  
+                  {/* Sparkle Icons on Hover */}
+                  <span className="absolute -left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:-left-4 transition-all duration-500">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  </span>
+                  <span className="absolute -right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:-right-4 transition-all duration-500 delay-100">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  </span>
                 </a>
               </motion.div>
 

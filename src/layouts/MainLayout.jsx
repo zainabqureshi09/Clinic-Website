@@ -12,7 +12,7 @@ const MainLayout = () => {
         Skip to main content
       </a>
       <Navbar />
-      <main id="main-content" className="pt-20">
+      <main id="main-content" className="pt-16 sm:pt-20">
         <Outlet />
       </main>
       <Footer />

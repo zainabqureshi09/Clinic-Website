@@ -66,14 +66,14 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Link to="/" className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="BSRV Medical" className="h-12 w-auto object-contain" />
+            <Link to="/" className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
+              <img src="/logo.png" alt="BSRV Medical" className="h-10 w-10 sm:h-12 sm:w-auto object-contain" />
               <div>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">BSRV Medical</span>
+                <span className="text-base sm:text-xl font-bold text-gray-900 dark:text-white whitespace-nowrap">BSRV Medical</span>
               </div>
             </Link>
 
-            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 leading-relaxed">
               We are committed to delivering comprehensive healthcare services, with a focus on patient satisfaction and achieving excellent clinical outcomes.
             </p>
 
@@ -116,15 +116,15 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-gray-900 dark:text-white font-semibold text-base sm:text-lg mb-4 sm:mb-6">Quick Links</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors inline-flex items-center space-x-2 group"
+                    className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors inline-flex items-center space-x-1 sm:space-x-2 group"
                   >
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <span>{link.name}</span>
                   </Link>
                 </li>
@@ -139,13 +139,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Our Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-gray-900 dark:text-white font-semibold text-base sm:text-lg mb-4 sm:mb-6">Our Services</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {services.map((service, index) => (
                 <li key={service}>
-                  <Link 
+                  <Link
                     to="/services"
-                    className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                   >
                     {service}
                   </Link>
@@ -161,23 +161,23 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <h4 className="text-gray-900 dark:text-white font-semibold text-lg mb-6">Stay Connected</h4>
+            <h4 className="text-gray-900 dark:text-white font-semibold text-base sm:text-lg mb-4 sm:mb-6">Stay Connected</h4>
 
-            <div className="space-y-3">
-              <a href="tel:4166496388" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-                <Phone className="w-4 h-4" />
+            <div className="space-y-2 sm:space-y-3">
+              <a href="tel:4166496388" className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>416-649-6388</span>
               </a>
-              <a href="mailto:bsrvmedical@gmail.com" className="flex items-center space-x-3 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-                <Mail className="w-4 h-4" />
+              <a href="mailto:bsrvmedical@gmail.com" className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>bsrvmedical@gmail.com</span>
               </a>
-              <div className="flex items-start space-x-3 text-gray-600 dark:text-gray-400">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>3430 Finch Ave E, Suite 6A<br />Scarborough, ON M1W 2R5</span>
+              <div className="flex items-start space-x-2 sm:space-x-3 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-1 flex-shrink-0" />
+                <span>3430 Finch Ave E, Suite 6A<br className="hidden sm:block" />Scarborough, ON M1W 2R5</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
-                <Clock className="w-4 h-4" />
+              <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>Open 7 Days: Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM</span>
               </div>
             </div>
