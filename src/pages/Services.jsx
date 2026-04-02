@@ -16,13 +16,25 @@ const Services = () => {
       features: ['Family Medicine & Primary Care', 'Chronic Disease Management', 'Children & Adult Care', 'Acute Care for Illnesses', 'Preventive Health & Annual Physicals', 'Vaccinations & Immunizations', "Women's Health", 'Minor Procedures'],
       color: 'from-emerald-400 to-teal-500',
     },
-    {
-      icon: Activity,
-      title: 'Endocrinology & Metabolism (Hormonal Health)',
-      description: 'Comprehensive care for hormonal and metabolic conditions with personalized treatment plans.',
-      features: ['Diabetes Management (Type 1, Type 2, Gestational)', 'Thyroid Disorders', 'Bone & Calcium Metabolism', 'Pituitary & Adrenal Disorders', 'Metabolic Syndrome & Lipid Disorders'],
-      color: 'from-teal-400 to-cyan-500',
-    },
+   {
+  icon: Activity,
+  title: 'Endocrinology & Metabolism (Hormonal Health)',
+  description: 'Comprehensive care for hormonal and metabolic conditions with personalized treatment plans.',
+  features: [
+    'Diabetes Management (Type 1, Type 2, Gestational)',
+    'Thyroid Disorders',
+    'Bone & Calcium Metabolism',
+    'Pituitary & Adrenal Disorders',
+    'Metabolic Syndrome & Lipid Disorders',
+
+    'Nephrology (Kidney Health)',
+    'Chronic Kidney Disease – Stages 1–5',
+    'Hypertension Management',
+    'Kidney Stones Prevention',
+    'Dialysis Support'
+  ],
+  color: 'from-teal-400 to-cyan-500',
+}
   ];
 
   return (
