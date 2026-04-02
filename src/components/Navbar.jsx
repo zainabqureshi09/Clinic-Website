@@ -52,9 +52,9 @@ const Navbar = () => {
               transition={{ duration: 0.2 }}
               aria-label="BSRV Medical & Dental Office Home"
             >
-              <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-7 w-7 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-12 lg:w-auto object-contain" />
+              <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 lg:h-12 lg:w-auto object-contain" />
               <div>
-                <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-gray-900 dark:text-white whitespace-nowrap">BSRV Medical & Dental</span>
+                <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white whitespace-nowrap">BSRV Medical & Dental</span>
               </div>
             </Link>
 
@@ -176,8 +176,8 @@ const Navbar = () => {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-6 sm:mb-8">
                   <Link to="/" className="flex items-center space-x-2 sm:space-x-3" aria-label="BSRV Medical & Dental Office Home">
-                    <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-8 w-8 sm:h-10 object-contain" />
-                    <span className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white whitespace-nowrap">BSRV Medical & Dental</span>
+                    <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-10 w-10 sm:h-12 object-contain" />
+                    <span className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white whitespace-nowrap">BSRV Medical & Dental</span>
                   </Link>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
