@@ -294,8 +294,8 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
-              Our Facility
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Our <span className="gradient-text">Facility</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Modern, clean, and welcoming spaces designed for your comfort and care
@@ -375,8 +375,8 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
-              Walk-In Clinic Services
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Walk-In <span className="gradient-text">Clinic Services</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Open 7 days a week. Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM. No appointment necessary for urgent medical concerns.
