@@ -1,18 +1,18 @@
 import { motion } from 'framer-motion';
-import { Droplets, Microscope, Shield } from 'lucide-react';
+import { Activity, Microscope, Shield } from 'lucide-react';
 
 const Specialties = () => {
   const specialties = [
     {
-      icon: Droplets,
-      title: 'Nephrology (Kidney Health)',
-      description: 'Comprehensive kidney care with advanced diagnostic and treatment services for all stages of kidney disease.',
+      icon: Activity,
+      title: 'Endocrinology & Metabolism (Hormonal Health)',
+      description: 'Comprehensive care for hormonal and metabolic conditions with personalized treatment plans.',
       features: [
-        'Chronic Kidney Disease – Stages 1–5',
-        'Hypertension Management',
-        'Kidney Stones Prevention',
-        'Electrolyte Disorders',
-        'Dialysis Support',
+        'Diabetes Management (Type 1, Type 2, Gestational)',
+        'Thyroid Disorders',
+        'Bone & Calcium Metabolism',
+        'Pituitary & Adrenal Disorders',
+        'Metabolic Syndrome & Lipid Disorders',
       ],
       gradient: 'from-teal-500 to-cyan-600',
     },

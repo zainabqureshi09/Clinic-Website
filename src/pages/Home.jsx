@@ -15,21 +15,21 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
-          <div 
+          <div
             className="absolute inset-0"
             style={{
               background: 'linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 30%, #ffffff 70%, #f0fdf4 100%)',
             }}
           />
           <div className="absolute inset-0 dark:hidden" />
-          
-          <div 
+
+          <div
             className="absolute inset-0 hidden dark:block"
             style={{
               background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #0f172a 100%)',
             }}
           />
-          
+
           <motion.div
             className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-200/30 dark:bg-emerald-900/20 rounded-full blur-3xl"
             animate={{
@@ -109,11 +109,16 @@ const Home = () => {
                 </Link>
                 <a
                   href="tel:4166496388"
-                  className="px-8 py-4 rounded-full font-semibold border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -3 }}
+                  className="group inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300"
+                  style={{
+                    background: 'linear-gradient(135deg, #0ea5e9 0%, #38bdf8 25%, #7dd3fc 50%, #38bdf8 75%, #0ea5e9 100%)',
+                    boxShadow: '0 4px 30px rgba(14, 165, 233, 0.4), 0 0 60px rgba(56, 189, 248, 0.3)',
+                  }}
+                  whileHover={{ scale: 1.05, y: -3, boxShadow: '0 10px 50px rgba(14, 165, 233, 0.5), 0 0 80px rgba(56, 189, 248, 0.4)' }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Call to Book
+                  <img src="/logo.png" alt="BSRV Dental Logo" className="w-6 h-6 object-contain" />
+                  <span>BSRV DENTAL</span>
                 </a>
               </motion.div>
 
@@ -142,92 +147,180 @@ const Home = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right Content - Image Cluster */}
+            {/* Right Content - Single Premium Image */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative mt-8 lg:mt-0"
             >
-              <div className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]">
-                {/* Main Large Image - Clinic Exam Room */}
-                <motion.div
-                  className="absolute top-0 left-0 w-full h-3/4 rounded-3xl overflow-hidden shadow-2xl"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8 }}
-                >
+              {/* Mobile Layout */}
+              <div className="lg:hidden relative">
+                <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                   <img
                     src="/clinic-exam-room.jpg"
-                    alt="BSRV Clinic Exam Room"
+                    alt="BSRV Clinic Exam Room - Modern medical facility with state-of-the-art equipment"
                     className="w-full h-full object-cover"
                   />
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                </motion.div>
-
-                {/* Floating Card 1 - Walk-in Clinic */}
-                <motion.div
-                  className="absolute -bottom-4 left-4 sm:left-6 px-4 py-3 sm:px-5 sm:py-3 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center">
-                      <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                  
+                  {/* Bottom Info Card */}
+                  <motion.div
+                    className="absolute bottom-4 left-4 right-4 px-5 py-4 rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm shadow-xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center">
+                        <Activity className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-semibold text-gray-900 dark:text-white">Walk-in Clinic</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">No appointment needed</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">Walk-in Clinic</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400">No Appointment Needed</div>
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
+              </div>
 
-                {/* Floating Card 2 - Multilingual Staff */}
-                <motion.div
-                  className="absolute -bottom-4 right-4 sm:right-6 px-4 py-3 sm:px-5 sm:py-3 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-gray-100 dark:border-slate-700"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 }}
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
-                      <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">Multilingual Staff</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400">English, Tamil, Hindi, Urdu</div>
-                    </div>
-                  </div>
-                </motion.div>
+              {/* Desktop Layout - Single Large Image */}
+              <div className="hidden lg:block relative">
+                <div className="relative w-full h-[550px]">
+                  {/* Main Large Image */}
+                  <motion.div
+                    className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <img
+                      src="/clinic-exam-room.jpg"
+                      alt="BSRV Clinic Exam Room - Modern medical facility with state-of-the-art equipment"
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                  </motion.div>
 
-                {/* Small Floating Images */}
-                <motion.div
-                  className="absolute top-4 -right-4 sm:-right-6 w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <img
-                    src="/clinic-office-interior.jpg"
-                    alt="BSRV Medical Office Interior"
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
+                  {/* Bottom Info Card - Walk-in */}
+                  <motion.div
+                    className="absolute bottom-6 left-6 px-6 py-4 rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm shadow-xl border border-gray-100 dark:border-slate-700"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center">
+                        <Activity className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-base font-semibold text-gray-900 dark:text-white">Walk-in Clinic</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">No Appointment Needed</div>
+                      </div>
+                    </div>
+                  </motion.div>
 
-                <motion.div
-                  className="absolute bottom-24 -left-4 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl floating-delayed"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1 }}
-                >
-                  <img
-                    src="/clinic-waiting-room.jpg"
-                    alt="BSRV Clinic Waiting Room"
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
+                  {/* Floating Badge - Multilingual */}
+                  <motion.div
+                    className="absolute bottom-6 right-6 px-5 py-4 rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm shadow-xl border border-gray-100 dark:border-slate-700"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7 }}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
+                        <Award className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-semibold text-gray-900 dark:text-white">Multilingual</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">4 Languages</div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinic Gallery Section */}
+      <section className="py-20 bg-gray-50 dark:bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
+              Our Facility
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Modern, clean, and welcoming spaces designed for your comfort and care
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Image 1 - Office Interior */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/clinic-office-interior.jpg"
+                alt="BSRV Medical Office Interior - Clean and modern consultation rooms"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white font-semibold text-lg">Modern Offices</h3>
+                <p className="text-gray-300 text-sm">Comfortable consultation rooms</p>
+              </div>
+            </motion.div>
+
+            {/* Image 2 - Waiting Room */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/clinic-waiting-room.jpg"
+                alt="BSRV Clinic Waiting Room - Spacious and comfortable seating area"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white font-semibold text-lg">Waiting Area</h3>
+                <p className="text-gray-300 text-sm">Spacious & comfortable</p>
+              </div>
+            </motion.div>
+
+            {/* Image 3 - Clinic Street Sign */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/clinic-street-sign.jpg"
+                alt="BSRV Medical Clinic Exterior - Easy to find location on Finch Ave"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-white font-semibold text-lg">Easy Access</h3>
+                <p className="text-gray-300 text-sm">Convenient location</p>
               </div>
             </motion.div>
           </div>
@@ -243,10 +336,10 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl premium-heading text-gray-900 dark:text-white mb-4 drop-shadow-lg">
               Walk-In Clinic Services
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Open 7 days a week. Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun 10AM-4PM. No appointment necessary for urgent medical concerns.
             </p>
           </motion.div>

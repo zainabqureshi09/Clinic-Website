@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import {
   Stethoscope,
-  Droplets,
+  Activity,
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
@@ -17,10 +17,10 @@ const Services = () => {
       color: 'from-emerald-400 to-teal-500',
     },
     {
-      icon: Droplets,
-      title: 'Nephrology (Kidney Health)',
-      description: 'Comprehensive kidney care with advanced diagnostic and treatment services.',
-      features: ['Chronic Kidney Disease – Stages 1–5', 'Hypertension Management', 'Kidney Stones Prevention', 'Electrolyte Disorders', 'Dialysis Support'],
+      icon: Activity,
+      title: 'Endocrinology & Metabolism (Hormonal Health)',
+      description: 'Comprehensive care for hormonal and metabolic conditions with personalized treatment plans.',
+      features: ['Diabetes Management (Type 1, Type 2, Gestational)', 'Thyroid Disorders', 'Bone & Calcium Metabolism', 'Pituitary & Adrenal Disorders', 'Metabolic Syndrome & Lipid Disorders'],
       color: 'from-teal-400 to-cyan-500',
     },
   ];
@@ -49,8 +49,8 @@ const Services = () => {
               Our <span className="gradient-text">Services</span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              We specialize in General Medicine and Nephrology, providing comprehensive
-              healthcare and advanced kidney care with state-of-the-art facilities.
+              We specialize in General Medicine and Endocrinology, providing comprehensive
+              healthcare and advanced hormonal care with state-of-the-art facilities.
             </p>
           </motion.div>
         </div>
