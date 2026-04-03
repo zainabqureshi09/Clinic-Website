@@ -94,7 +94,7 @@ const Home = () => {
               >
                 <Link
                   to="/appointment"
-                  className="group relative overflow-hidden px-8 py-4 rounded-full font-semibold text-white transition-all duration-500 backdrop-blur-md"
+                  className="group relative overflow-hidden px-6 sm:px-8 md:px-10 py-4 sm:py-5 rounded-full font-semibold text-white transition-all duration-500 backdrop-blur-md text-sm sm:text-base md:text-lg"
                   style={{
                     background: 'linear-gradient(135deg, rgba(5, 150, 105, 0.95) 0%, rgba(16, 185, 138, 0.9) 50%, rgba(20, 184, 166, 0.95) 100%)',
                     boxShadow: '0 8px 28px rgba(5, 150, 105, 0.5), 0 0 50px rgba(16, 185, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)',
@@ -105,32 +105,32 @@ const Home = () => {
                 >
                   <span className="flex items-center justify-center space-x-2 relative z-10">
                     <span className="font-medium">Request Appointment</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                   {/* Premium shine effect */}
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
                 </Link>
                 <a
                   href="tel:4166496388"
-                  className="group relative inline-flex items-center justify-center space-x-3 px-10 py-5 rounded-full font-semibold text-white overflow-hidden transition-all duration-500 backdrop-blur-md"
+                  className="group relative inline-flex items-center justify-center space-x-3 px-6 sm:px-8 md:px-10 py-4 sm:py-5 rounded-full font-semibold text-white overflow-hidden transition-all duration-500 backdrop-blur-md text-sm sm:text-base md:text-lg"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(5, 150, 105, 0.95) 0%, rgba(16, 185, 138, 0.9) 25%, rgba(14, 165, 233, 0.8) 50%, rgba(16, 185, 138, 0.9) 75%, rgba(5, 150, 105, 0.95) 100%)',
-                    boxShadow: '0 8px 32px rgba(5, 150, 105, 0.5), 0 0 60px rgba(16, 185, 138, 0.4), 0 0 120px rgba(14, 165, 233, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                    background: 'linear-gradient(135deg, rgba(5, 150, 105, 0.95) 0%, rgba(16, 185, 138, 0.9) 25%, rgba(30, 64, 175, 0.8) 50%, rgba(16, 185, 138, 0.9) 75%, rgba(5, 150, 105, 0.95) 100%)',
+                    boxShadow: '0 8px 32px rgba(5, 150, 105, 0.5), 0 0 60px rgba(30, 64, 175, 0.4), 0 0 120px rgba(30, 58, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
                     border: '1px solid rgba(255, 255, 255, 0.25)',
                   }}
-                  whileHover={{ 
-                    scale: 1.08, 
-                    y: -5, 
-                    boxShadow: '0 20px 60px rgba(5, 150, 105, 0.7), 0 0 100px rgba(16, 185, 138, 0.6), 0 0 180px rgba(14, 165, 233, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
+                  whileHover={{
+                    scale: 1.08,
+                    y: -5,
+                    boxShadow: '0 20px 60px rgba(5, 150, 105, 0.7), 0 0 100px rgba(30, 64, 175, 0.6), 0 0 180px rgba(30, 58, 138, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {/* Animated Background Gradient */}
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
-                  
+
                   {/* Outer Glow Ring */}
                   <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{
-                    background: 'radial-gradient(circle, rgba(14, 165, 233, 0.6) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(30, 64, 175, 0.6) 0%, transparent 70%)',
                     filter: 'blur(25px)',
                   }} />
                   
