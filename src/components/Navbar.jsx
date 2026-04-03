@@ -54,7 +54,7 @@ const Navbar = () => {
             >
               <img src="/logo.png" alt="BSRV Medical & Dental Office" className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 lg:h-12 lg:w-auto object-contain" />
               <div>
-                <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white whitespace-nowrap">BSRV Medical & Dental</span>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900 dark:text-white whitespace-nowrap">BSRV Medical & Dental</span>
               </div>
             </Link>
 
