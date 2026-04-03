@@ -94,7 +94,7 @@ const Home = () => {
               >
                 <Link
                   to="/appointment"
-                  className="group relative overflow-hidden px-6 sm:px-8 md:px-10 py-4 sm:py-5 rounded-full font-semibold text-white transition-all duration-500 backdrop-blur-md text-sm sm:text-base md:text-lg"
+                  className="group relative inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-4 sm:py-5 rounded-full font-semibold text-white transition-all duration-500 backdrop-blur-md text-sm sm:text-base md:text-lg"
                   style={{
                     background: 'linear-gradient(135deg, rgba(5, 150, 105, 0.95) 0%, rgba(16, 185, 138, 0.9) 50%, rgba(20, 184, 166, 0.95) 100%)',
                     boxShadow: '0 8px 28px rgba(5, 150, 105, 0.5), 0 0 50px rgba(16, 185, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)',
@@ -103,7 +103,7 @@ const Home = () => {
                   whileHover={{ scale: 1.06, y: -4, boxShadow: '0 16px 48px rgba(5, 150, 105, 0.6), 0 0 70px rgba(16, 185, 138, 0.4)' }}
                   whileTap={{ scale: 0.96 }}
                 >
-                  <span className="flex items-center justify-center space-x-2 relative z-10">
+                  <span className="flex items-center justify-center space-x-3 relative z-10">
                     <span className="font-medium">Request Appointment</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
