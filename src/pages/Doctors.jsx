@@ -72,6 +72,37 @@ const Doctors = () => {
       ],
       languages: ['English', 'Hindi', 'Urdu', 'Gujarati'],
     },
+    {
+      name: 'Dr. Pooja Kharbanda',
+      title: 'Nephrologist and Internist',
+      position: 'Kidney & Internal Medicine Specialist',
+      image: '/drpooja.png',
+      status: 'Available Wednesdays',
+      specialties: [
+        'Chronic Kidney Disease',
+        'Glomerular Disorders',
+        'Hypertension Management',
+        'Electrolyte Disturbances',
+      ],
+      education: [
+        {
+          degree: 'Medical Degree',
+          institution: 'Aureus University School of Medicine',
+          icon: BookOpen,
+        },
+        {
+          degree: 'Internal Medicine Residency',
+          institution: 'Pennsylvania',
+          icon: Stethoscope,
+        },
+        {
+          degree: 'Nephrology Fellowship',
+          institution: 'Jefferson Einstein Hospital, Philadelphia',
+          icon: Award,
+        },
+      ],
+      languages: ['English'],
+    },
   ];
 
   return (
@@ -312,7 +343,7 @@ const Doctors = () => {
                   transition={{ delay: 0.4 }}
                   className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
                 >
-                  Dr. Ruhin Karim and our team are currently accepting new patient registrations. Register today to receive comprehensive family medical care from our experienced physicians.
+                  Our team of experienced physicians is currently accepting new patient registrations. Register today to receive comprehensive medical care from our qualified physicians and specialists.
                 </motion.p>
               </div>
 
