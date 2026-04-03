@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Send } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '../config/emailjs';
+import { GOOGLE_SCRIPT_URL } from '../config/googleSheets';
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -43,26 +42,28 @@ const Appointment = () => {
     });
   };
 
-  const sendEmail = async (data) => {
-    emailjs.init(EMAILJS_CONFIG.publicKey);
-
-    const templateParams = {
-      patient_name: data.name,
-      patient_phone: data.phone,
-      patient_email: data.email,
+  const submitToGoogleSheets = async (data) => {
+    const payload = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
       department: data.department,
       doctor: data.doctor || 'Any Available Doctor',
-      preferred_date: data.date,
-      preferred_time: data.time,
+      date: data.date,
+      time: data.time,
       message: data.message || 'No additional message',
-      to_email: 'bsrvmedical@gmail.com',
     };
 
-    return emailjs.send(
-      EMAILJS_CONFIG.serviceId,
-      EMAILJS_CONFIG.templateId,
-      templateParams
-    );
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    return response;
   };
 
   const handleSubmit = async (e) => {
@@ -71,7 +72,7 @@ const Appointment = () => {
     setSubmitStatus(null);
 
     try {
-      await sendEmail(formData);
+      await submitToGoogleSheets(formData);
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -84,7 +85,7 @@ const Appointment = () => {
         message: '',
       });
     } catch (error) {
-      console.error('Failed to send:', error);
+      console.error('Failed to submit:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
