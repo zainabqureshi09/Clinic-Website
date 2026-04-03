@@ -114,14 +114,14 @@ const Home = () => {
                   href="tel:4166496388"
                   className="group relative inline-flex items-center justify-center space-x-3 px-5 sm:px-7 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-500 backdrop-blur-md text-xs sm:text-sm md:text-base"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(5, 150, 105, 0.95) 0%, rgba(16, 185, 138, 0.9) 25%, rgba(30, 64, 175, 0.8) 50%, rgba(16, 185, 138, 0.9) 75%, rgba(5, 150, 105, 0.95) 100%)',
-                    boxShadow: '0 6px 24px rgba(5, 150, 105, 0.4), 0 0 40px rgba(30, 64, 175, 0.3), 0 0 80px rgba(30, 58, 138, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                    background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.95) 0%, rgba(29, 78, 216, 0.9) 25%, rgba(30, 64, 175, 0.85) 50%, rgba(29, 78, 216, 0.9) 75%, rgba(37, 99, 235, 0.95) 100%)',
+                    boxShadow: '0 6px 24px rgba(37, 99, 235, 0.4), 0 0 40px rgba(30, 64, 175, 0.3), 0 0 80px rgba(30, 58, 138, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
                     border: '1px solid rgba(255, 255, 255, 0.25)',
                   }}
                   whileHover={{
                     scale: 1.05,
                     y: -3,
-                    boxShadow: '0 12px 40px rgba(5, 150, 105, 0.5), 0 0 60px rgba(30, 64, 175, 0.4), 0 0 120px rgba(30, 58, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
+                    boxShadow: '0 12px 40px rgba(37, 99, 235, 0.5), 0 0 60px rgba(30, 64, 175, 0.4), 0 0 120px rgba(30, 58, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
