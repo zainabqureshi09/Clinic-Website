@@ -112,7 +112,7 @@ const Home = () => {
                 </Link>
                 <a
                   href="tel:4166496388"
-                  className="group relative inline-flex items-center justify-center space-x-3 px-5 sm:px-7 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-500 backdrop-blur-md text-xs sm:text-sm md:text-base"
+                  className="group relative inline-flex items-center justify-center px-5 sm:px-7 md:px-8 py-3 sm:py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-500 backdrop-blur-md text-xs sm:text-sm md:text-base"
                   style={{
                     background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.95) 0%, rgba(29, 78, 216, 0.9) 25%, rgba(30, 64, 175, 0.85) 50%, rgba(29, 78, 216, 0.9) 75%, rgba(37, 99, 235, 0.95) 100%)',
                     boxShadow: '0 6px 24px rgba(37, 99, 235, 0.4), 0 0 40px rgba(30, 64, 175, 0.3), 0 0 80px rgba(30, 58, 138, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
@@ -133,23 +133,23 @@ const Home = () => {
                     background: 'radial-gradient(circle, rgba(30, 64, 175, 0.6) 0%, transparent 70%)',
                     filter: 'blur(25px)',
                   }} />
-                  
+
                   {/* Shiny Sweep Effect */}
                   <span className="absolute inset-0 overflow-hidden rounded-full">
                     <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" style={{
                       background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent)',
                     }} />
                   </span>
-                  
+
                   {/* Inner Shine Border */}
                   <span className="absolute inset-0 rounded-full" style={{
                     boxShadow: 'inset 0 2px 15px rgba(255, 255, 255, 0.3), inset 0 -2px 15px rgba(0, 0, 0, 0.15)',
                   }} />
-                  
+
                   {/* Content */}
-                  <img src="/logo.png" alt="BSRV Dental Logo" className="w-6 h-6 sm:w-7 sm:h-7 object-contain relative z-10 drop-shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
-                  <span className="relative z-10 tracking-wide font-bold text-sm sm:text-base">BSRV DENTAL</span>
-                  
+                  <img src="/buttonpic.png" alt="BSRV Dental" className="w-6 h-6 sm:w-7 sm:h-7 object-contain relative z-10 drop-shadow-lg group-hover:scale-110 transition-transform duration-300" />
+                  <span className="relative z-10 tracking-wide font-bold text-xs sm:text-sm">BSRV DENTAL</span>
+
                   {/* Sparkle Icons on Hover */}
                   <span className="absolute -left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:-left-4 transition-all duration-500">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
