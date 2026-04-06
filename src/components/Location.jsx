@@ -33,7 +33,7 @@ const Location = () => {
     },
     {
       icon: Clock,
-      title: 'Working Hours',
+      title: 'Operation Hours',
       details: ['Open 7 Days a Week', 'Monday to Friday: 9AM - 7PM', 'Saturday: 9AM - 5PM', 'Sunday: 10AM - 4PM'],
       color: 'from-amber-400 to-orange-500',
     },
